@@ -196,7 +196,7 @@ function create_main_page()
     content.appendChild(main_page);
 };
 
-// Create project MPLI
+// Create project MPLI page
 function create_MPLI_page()
 {
     empty_content('content');
@@ -247,6 +247,23 @@ function create_MPLI_page()
 
     const content = document.querySelector('#content');
     content.appendChild(MPLI_project_page);
+};
+
+// Create team page
+function create_team_page()
+{
+    empty_content('content');
+
+    const team_page = document.createElement('div');
+    team_page.setAttribute('id','team_page');
+
+    team_page.innerHTML = 
+    `
+
+    `;
+
+    const content = document.querySelector('#content');
+    content.appendChild(team_page);
 };
 
 // Trys to submit form
