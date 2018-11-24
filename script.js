@@ -77,7 +77,7 @@ function create_invite_form()
     <div id="form_title">
         Devenez hébergeur pour Merci pour l'invit'
     </div>
-    <p id="description">
+    <p1 id="description">
         Vous avez une chambre libre ? Vous souhaitez devenir hébergeur solidaire et faire 
         parti de l'aventure Merci pour l'invit' ? 
         <br> <br>
@@ -99,7 +99,7 @@ function create_invite_form()
         seront pas partagées et ne serviront que pour les besoins du projet.
         <br> <br>
         <m style='color: red; display: inline-block;'> * Champ obligatoire </m>
-    </p>
+    </p1>
     `;
 
     let names = ['Nom','Prénom','Genre','Ville','Code Postal','Adresse',
@@ -174,6 +174,65 @@ function create_main_page()
     `;
 };
 
+// Create FAQ page
+function create_faq_page()
+{
+    empty_content('content');
+}
+
+// Create contacts page
+function create_contacts_page()
+{
+    empty_content('content');
+    
+    const contacts_page = document.createElement('div');
+    contacts_page.setAttribute('id','contacts_page');
+
+    contacts_page.innerHTML = 
+    `
+    <div class="boxTopRed">
+        <b>
+            CONTACT : 
+            <br><br>
+            Contact Merci pour l’invit’
+        </b>
+        <br>
+        Email : 
+        <a href="mailto:margaux@solinum.org">
+            margaux@solinum.org
+        </a>
+        <br>
+        Page Facebook : 
+        <a href="https://www.facebook.com/mercipourlinvit">
+            https://www.facebook.com/mercipourlinvit
+        </a>
+        <br>
+        Tel : 06 71 20 82 79 (9h30h - 18h30 en semaine).
+        <br>
+        <br>
+        Pour vous inscrire en tant qu'hébergeur.se, remplissez le formulaire.
+        <br>
+        <button onclick="create_invite_form()">
+            Offrir un hébergement
+        </button>
+        <br><br>
+        Les demandes d’hébergements peuvent être envoyées à 
+        <a href="mailto:margaux@solinum.org">
+            margaux@solinum.org
+        </a> 
+         ou sur notre 
+        <a href="https://www.facebook.com/mercipourlinvit/">
+        page facebook
+        </a>
+    </div>
+		
+    `;
+
+    const content = document.querySelector('#content');
+    content.appendChild(contacts_page);
+
+}
+
 // Create project MPLI page
 function create_MPLI_page()
 {
@@ -200,8 +259,8 @@ function create_MPLI_page()
         Merci pour l'invit' assure durant la durée de l’hébergement un accompagnement 
         social permettant d’inscrire l’accueilli dans un parcours de réinsertion.
         <br><br>
-        L'hébergement solidaire se déroule donc en 6 étapes :
     </p>
+    <span class="emphasize"> L'hébergement solidaire se déroule donc en 6 étapes : </span>
     <img id="etapes_hebergement" src="etapes_hebergement.png"></img>
     <p>
         Pour devenir hébergeur solidaire, il vous suffit de remplir
@@ -213,6 +272,7 @@ function create_MPLI_page()
         6 mois chez une hébergeuse solidaire. Malgré son emploi en intérim, 
         elle s’est retrouvée à la rue et a été orientée vers nous par une 
         association via cette page.
+        <img id="key_passing" src="key_passing.png"></img>
         <br><br>
         Aujourd’hui, elle a pu refaire son CV grâce à l’association qui 
         l’accompagne, elle a obtenu un CDD qui va bientôt devenir un CDI.
@@ -220,7 +280,6 @@ function create_MPLI_page()
         Au-delà de l’hébergement, c’est aussi un lien social durable et 
         des mises en réseaux qui sont permises par l’hébergement l’habitant.
     </p>
-    <img id="key_passing" src="key_passing.png"></img>
     `;
 
     const content = document.querySelector('#content');
@@ -302,7 +361,7 @@ function submitForm(event)
     fetch(encoded_url);  
 };
 
-create_invite_form();
+create_contacts_page();
 
 function create_heberger_page(event) 
 {
