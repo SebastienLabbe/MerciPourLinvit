@@ -407,6 +407,6 @@ mpli.addEventListener('click', create_MPLI_page);
 equipe.addEventListener('click', create_team_page);
 //faq.addEventListener('click', create_faq_page);
 heberger.addEventListener('click', create_heberger_page);
-//contacts.addEventListener('click', create_contacts_page);
+contacts.addEventListener('click', create_contacts_page);
 
 create_main_page();
