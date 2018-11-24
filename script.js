@@ -215,7 +215,5 @@ function submitForm(event) {
     }
 
     let encoded_url = encodeURI(`https://script.google.com/macros/s/AKfycbzTM2nRDBcn4vDs2dTAJTnm7diQakYLrwTDxEGazT0oFMbowL7z/exec?${parameters.join('&')}`);
-    console.log(encoded_url)
-    let window = open(encoded_url);
-    window.close();    
+    fetch(encoded_url);  
 }
