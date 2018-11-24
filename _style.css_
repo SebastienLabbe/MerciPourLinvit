@@ -1,0 +1,7 @@
+body {
+    background-color: bisque;
+    cursor: default;	
+    user-select: none;
+    margin: 0px;
+    padding: 0px;
+}
