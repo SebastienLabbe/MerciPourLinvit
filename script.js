@@ -167,9 +167,8 @@ function create_main_page()
 {
     empty_content('content');
 
-    const main_page = document.createElement('div');
-    main_page.setAttribute('id','main_page');
-    main_page.innerHTML =    
+    const content = document.querySelector('#content');
+    content.innerHTML =    
     `
     <img id="project_MPLI" src="project_MPLI.png"></img>
     <p>
@@ -188,8 +187,6 @@ function create_main_page()
         <br> <br>
     </p>
     `;
-    const body = document.querySelector('#content');
-    content.appendChild(main_page);
 };
 
 // Create project MPLI page
