@@ -18,47 +18,93 @@
         <div class="form_content">
             <form class="contact2-form validate-form">
                 <span class="contact2-form-title">
-                    Contact Us
+                    Invite
                 </span>
 
-                <div class="wrap-input2 validate-input" data-validate="Nom necessaire">
-                    <input class="input2" type="text" name="nom">
-                    <span class="focus-input2" data-placeholder="NOM"></span>
+                <div id="input_nom" data-validate="Nom necessaire">
+                    <label for="nom"><b>Nom : </b></label>
+                    <br>
+                    <input class="input" type="text" name="nom" placeholder="Nom">
+                    <span class="focus-input" data-placeholder="NOM"></span>
                 </div>
                 
-                <div class="wrap-input2 validate-input" data-validate="Prénom necessaire">
-                    <input class="input2" type="text" name="prénom">
-                    <span class="focus-input2" data-placeholder="PRENOM"></span>
+                <div id="input_prenom" data-validate="Prénom necessaire">
+                    <label for="prenom"><b>Prénom : </b></label>
+                    <br>
+                    <input class="input" type="text" name="prenom">
+                    <span class="focus-input" data-placeholder="PRENOM"></span>
                 </div>
 
-                <div class="wrap-input2 validate-input" data-validate = "Genre necessaire">
+                <div id="intput_genre" data-validate = "Genre necessaire">
+                    <label for="nom"><b>Nom : </b></label>
+                    <br>
                     <input class="input2" type="text" name="genre">
                     <span class="focus-input2" data-placeholder="GENRE"></span>
                 </div>
 
                 <div class="wrap-input2 validate-input" data-validate = "Addresse mail necessaire">
+                    <label for="nom"><b>Nom : </b></label>
+                    <br>
                     <input class="input2" type="text" name="addresse_mail">
                     <span class="focus-input2" data-placeholder="ADDRESSE_MAIL"></span>
                 </div>
                 
                 <div class="wrap-input2 validate-input" data-validate = "Ville necessaire">
+                    <label for="nom"><b>Nom : </b></label>
+                    <br>
                     <input class="input2" type="text" name="ville">
                     <span class="focus-input2" data-placeholder="VILLE"></span>
                 </div>
 
                 <div class="wrap-input2 validate-input" data-validate = "Code Postal necessaire">
+                    <label for="nom"><b>Nom : </b></label>
+                    <br>
                     <input class="input2" type="text" name="code_postal">
                     <span class="focus-input2" data-placeholder="CODE_POSTAL"></span>
                 </div>
 
+                <div class="wrap-input2 validate-input" data-validate = "Addresse necessaire">
+                    <label for="nom"><b>Nom : </b></label>
+                    <br>
+                    <input class="input2" type="text" name="addresse">
+                    <span class="focus-input2" data-placeholder="ADDRESSE"></span>
+                </div>
+                
+                <div class="wrap-input2 validate-input" data-validate = "Numéro de téléphone necessaire">
+                    <label for="nom"><b>Nom : </b></label>
+                    <br>
+                    <input class="input2" type="text" name="numero_de_telephone">
+                    <span class="focus-input2" data-placeholder="NUMERO_DE_TELEPHONE"></span>
+                </div>
+
+                <div class="wrap-input2 validate-input" data-validate = "Nombres d'habitants dans le foyer necessaire">
+                    <label for="nom"><b>Nom : </b></label>
+                    <br>
+                    <input class="input2" type="text" name="nombre_d_habitants">
+                    <span class="focus-input2" data-placeholder="NOMBRE_D_HABITANTS"></span>
+                </div>
+
                 <div class="wrap-input2 validate-input" data-validate = "Code Postal necessaire">
-                    <select name="Modalités d'hébergement">
+                    <label for="nom"><b>Nom : </b></label>
+                    <br>
+                    <select name="mode_d_hebergement">
                         <option value="Une chambre à part">Une chambre à part</option>
                         <option value="Canapé-lit">Canapé-lit</option>
                         <option value="Logement entier">Logement entier</option>
                         <option value="Autre">Autre</option>
                     </select>
                     <span class="focus-input2" data-placeholder="CODE_POSTAL"></span>
+                </div>
+
+                <div>
+                    <input type="checkbox" class="duree" name="deux_semaines" value="deux_semaines">
+                    <label for="subscribeNews">Deux semaines</label>
+                    <input type="checkbox" class="duree" name="1_3_mois" value="newsletter">
+                    <label for="subscribeNews">De 1 mois à 3 mois</label>
+                    <input type="checkbox" class="duree" name="subscribe" value="newsletter">
+                    <label for="subscribeNews">De 4 mois à 6 mois</label>
+                    <input type="checkbox" class="duree" name="subscribe" value="newsletter">
+                    <label for="subscribeNews">6 mois ou plus</label>
                 </div>
 
                 
