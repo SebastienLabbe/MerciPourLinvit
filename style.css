@@ -212,10 +212,10 @@ select {
 
 #menu_logo {
   display: block;
-  width:70px;
-  height: 70px;
-  padding: 5px;
-  padding-top: 1px;
+  width:100px;
+  height: auto;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 
 /* MPLI */
