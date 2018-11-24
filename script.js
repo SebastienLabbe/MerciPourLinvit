@@ -55,7 +55,7 @@ function create_form_button()
 // Returns as a string the HTML source code for the initial description for the form
 function create_form_description()
 {
-    return `<p id="description">
+    return `<p1 id="description"> 
             Vous avez une chambre libre ? 
             Vous souhaitez devenir hébergeur solidaire et faire parti de l'aventure Merci pour l'invit' ? 
             <br> <br>
@@ -77,7 +77,7 @@ function create_form_description()
             seront pas partagées et ne serviront que pour les besoins du projet.
             <br> <br>
             <m style='color: red; display: inline-block;'> * Champ obligatoire </m>
-            </p>`;
+            </p1>`;
 };
 
 // Returns as a string the HTML source code for a drop down menu
@@ -215,8 +215,8 @@ function create_MPLI_page()
         Merci pour l'invit' assure durant la durée de l’hébergement un accompagnement 
         social permettant d’inscrire l’accueilli dans un parcours de réinsertion.
         <br><br>
-        L'hébergement solidaire se déroule donc en 6 étapes :
     </p>
+    <span class="emphasize"> L'hébergement solidaire se déroule donc en 6 étapes : </span>
     <img id="etapes_hebergement" src="etapes_hebergement.png"></img>
     <p>
         Pour devenir hébergeur solidaire, il vous suffit de remplir
@@ -228,6 +228,7 @@ function create_MPLI_page()
         6 mois chez une hébergeuse solidaire. Malgré son emploi en intérim, 
         elle s’est retrouvée à la rue et a été orientée vers nous par une 
         association via cette page.
+        <img id="key_passing" src="key_passing.png"></img>
         <br><br>
         Aujourd’hui, elle a pu refaire son CV grâce à l’association qui 
         l’accompagne, elle a obtenu un CDD qui va bientôt devenir un CDI.
@@ -235,7 +236,6 @@ function create_MPLI_page()
         Au-delà de l’hébergement, c’est aussi un lien social durable et 
         des mises en réseaux qui sont permises par l’hébergement l’habitant.
     </p>
-    <img id="key_passing" src="key_passing.png"></img>
     `;
 
     const content = document.querySelector('#content');
