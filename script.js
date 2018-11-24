@@ -23,7 +23,7 @@ function create_form_text_holder(name,place_holder)
     return `<div class="input_container">
                 <label for="${name.toLowerCase()}"><b> ${shown_name} : </b></label>
                 <br>
-                <input id="input_${name.toLowerCase()}" type="text" name="${name.toLowerCase()}" placeholder="${place_holder}">
+                <input id="input_${name.toLowerCase()}" class="data" type="text" name="${name.toLowerCase()}" placeholder="${place_holder}">
                 <span class="focus-input" data-placeholder="${name.toUpperCase()}"></span>
             </div>`;
 };
@@ -180,10 +180,17 @@ let data_name = [
 ]
 let data = [];
 function submitForm(event) {
-    console.log('clicked')
     const data_containers = document.querySelectorAll('.input_container');
+    console.log(data_containers);
     for (let i = 0; i < data_containers.length; i++) {
-        data.push(data_containers[i].querySelector('.data').value);
+        console.log('clicked')
+        let answer = data_containers[i].querySelector('.data').value;
+        if (answer == "" && i != 13) {
+            alert("Vous n'avez pas repondu a une des cases obligatoires.");
+            return;
+        }
+        data.push(answer);
+
     }
 
     let parameters = [];
