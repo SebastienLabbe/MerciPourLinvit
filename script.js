@@ -329,7 +329,8 @@ function create_heberger_page(event)
     page.innerHTML = 
     `
     <span class="emphasize"> 
-        Pour offrir un hébergement, cliquez <a class="link" onclick="create_invite_form()"> ici </a>. 
+        Pour offrir un hébergement, cliquez ci-dessous: <br>
+        <button onclick="create_invite_form()"> Offrir un hebergement </button> 
     </span> 
     <br> <br>
     <p>
@@ -366,7 +367,6 @@ const heberger = document.querySelector("#heberger");
 const faq = document.querySelector("#faq");
 const contacts = document.querySelector("#contacts");
 
-
 acceuil.addEventListener('click', create_main_page);
 mpli.addEventListener('click', create_MPLI_page);
 equipe.addEventListener('click', create_team_page);
@@ -374,7 +374,4 @@ equipe.addEventListener('click', create_team_page);
 heberger.addEventListener('click', create_heberger_page);
 //contacts.addEventListener('click', create_contacts_page);
 
-
-
-
-create_team_page();
+create_main_page();

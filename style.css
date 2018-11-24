@@ -15,7 +15,7 @@ body {
   padding: 5px;  
 }
 
-p {
+p, boxTopRed {
   font-size: 20px;
   text-align: justify;
   margin-left: 15%;
@@ -243,7 +243,7 @@ select {
 
 .team_member {
   display: inline-block;
-  margin: auto;
+  margin: 20px;
 }
 
 .team_member_image {
