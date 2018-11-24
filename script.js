@@ -250,10 +250,26 @@ function create_team_page()
     const team_page = document.createElement('div');
     team_page.setAttribute('id','team_page');
 
-    team_page.innerHTML = 
-    `
-
-    `;
+    let names = ["Victoria Mandefield","Yanisse Riffi","Terrerias Margaux"];
+    let links = ["https://www.linkedin.com/in/victoriamandefield",
+                "https://www.linkedin.com/in/yassiner/",
+                "https://www.linkedin.com/in/margaux-tarrerias-b20129134/"];
+    let roles = ["Directrice de l'association Solinum","Développeur web",
+                "Chef de projet Merci pour l’invit’"];
+    let image_links = ["victoria_mandefield","yassine_riffi","margaux_tarrerias"];
+    for(let i = 0; i<3;i++)
+    {
+        team_page.innerHTML += 
+        `
+        <div class="team_member">
+		    <img class="team_member_image" src="${image_links[i]}.png">
+			<div class="team_member_description">
+				<h5 class="name"><a href="${links[i]}">${names[i]}</a></h5>
+				${roles[i]}
+			</div>
+		</div>
+        `;
+    }
 
     const content = document.querySelector('#content');
     content.appendChild(team_page);
@@ -301,7 +317,7 @@ function submitForm(event)
     fetch(encoded_url);  
 };
 
-create_main_page();
+create_team_page();
 
 function create_heberger_page(event) 
 {
