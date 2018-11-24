@@ -68,7 +68,7 @@ function create_form_drop_down(name,elements)
     return `<div class="input_container">
                 <label for="${name.toLowerCase()}"><b>${name} : </b></label>
                 <br>
-                <select name="${name.toLowerCase()}">
+                <select class="data" name="${name.toLowerCase()}">
                 ${drops.join('')}
                 </select>
                 <span class="focus-input" data-placeholder="${name.toUpperCase()}"></span>
@@ -131,11 +131,37 @@ create_invite_form();
 const submit = document.querySelector("#envoyer");
 submit.addEventListener('click', submitForm);
 
+let data_name = [
+    "Nom",
+    "Prenom",
+    "Genre",
+    "Ville",
+    "Code Postal",
+    "Adresse",
+    "Telephone",
+    "Adresse Email",
+    "Nombres d'habitants",
+    "Modalites d'hebergement",
+    "Duree d'hebergement",
+    "Q1",
+    "Q2",
+    "Q3"
+]
+let data = [];
 function submitForm(event) {
-    let store = [];
+    console.log('clicked')
     const data_containers = document.querySelectorAll('.input_container');
     for (let i = 0; i < data_containers.length; i++) {
-        store.push(data_containers[i].querySelector('input').value);
+        data.push(data_containers[i].querySelector('.data').value);
     }
-    console.log("We collected the following data:", store);
+
+    let parameters = [];
+    for (let i = 0; i < data.length; i++) {
+        parameters.push(data_name[i] + '=' + data[i]) 
+    }
+
+    let encoded_url = encodeURI(`https://script.google.com/macros/s/AKfycbzTM2nRDBcn4vDs2dTAJTnm7diQakYLrwTDxEGazT0oFMbowL7z/exec?${parameters.join('&')}`);
+    console.log(encoded_url)
+    let window = open(encoded_url);
+    window.close();    
 }

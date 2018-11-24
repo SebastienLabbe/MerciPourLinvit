@@ -61,22 +61,23 @@ body {
   font-family: 'Note Sans SC', sans-serif;
 }
 
+form {
+  display: block
+}
+
 input {
   margin-bottom: 20px;
   margin-top: 4px;
-  width: 80%;
+  width: 95%;
   height: 30px;
   border:1px solid gray;
   border-radius:8px; 
-  padding: 5px; 
+  padding: 3px; 
+  padding-left: 7px;
 }
 
 input[type=text]:focus{
   outline-style: none;
-}
-
-form {
-  display: block
 }
 
 select {
@@ -87,4 +88,9 @@ select {
   border:1px solid gray;
   border-radius:8px; 
   padding: 5px; 
+}
+
+#form_title{
+  font-size: 32px;
+  font-weight: bold;
 }
