@@ -34,14 +34,6 @@ function create_form_text_holder(name,place_holder)
             </div>`;
 };
 
-// Returns as a string the HTML source code for the title for the form
-function create_form_title(title)
-{
-    return `<div id="form_title">
-                ${title}
-            </div>`;
-};
-
 // Returns as a string the HTML source code for the button for the form
 function create_form_button()
 {
@@ -50,34 +42,6 @@ function create_form_button()
                     Envoyer
                 </button>
             </div>`;
-};
-
-// Returns as a string the HTML source code for the initial description for the form
-function create_form_description()
-{
-    return `<p id="description">
-            Vous avez une chambre libre ? 
-            Vous souhaitez devenir hébergeur solidaire et faire parti de l'aventure Merci pour l'invit' ? 
-            <br> <br>
-            Merci pour l'invit' est un projet qui prône l'hébergement solidaire afin de faciliter la 
-            réinsertion socioprofessionnelle de femmes et de jeunes en grande précarité. 
-            <br> <br>
-            Merci pour l'invit' se développe actuellement à BORDEAUX, à PARIS et sa banlieue. 
-            <br> <br>
-            Après avoir rempli ce questionnaire, la responsable "hébergement"vous contactera pour 
-            vous expliquer plus amplement la démarche. La Charte de cohabitation sera signée entre 
-            vous et la personne accueillie lors du début de l'hébergement. 
-            <br> <br>
-            Vous habitez une autre ville ? N'hésitez pas à remplir ce formulaire, notre équipe 
-            vous répondra dès que possible. 
-            <br> <br>
-            Ce questionnaire <b>NE VOUS ENGAGE PAS A HEBERGER.</b>
-            <br> <br>
-            Toutes les informations collectées sont strictement pour l'association, elles ne 
-            seront pas partagées et ne serviront que pour les besoins du projet.
-            <br> <br>
-            <m style='color: red; display: inline-block;'> * Champ obligatoire </m>
-            </p>`;
 };
 
 // Returns as a string the HTML source code for a drop down menu
@@ -100,53 +64,74 @@ function create_form_drop_down(name,elements)
 };
 
 // Creates the entire form and adds it to the body
-function create_invite_form(form_name)
+function create_invite_form()
 {
     empty_content('content');
 
     const form = document.createElement('form');
 
-    let form_inner_html = [];
+    let form_inner_html = '';
 
-    let names = ['Nom','Prénom','Genre','Ville',
-    'Code Postal','Adresse','Numéro de téléphone',
-    'Adresse mail', "Nombres d'habitants dans le foyer"];
+    form_inner_html += 
+    `
+    <div id="form_title">
+        Devenez hébergeur pour Merci pour l'invit'
+    </div>
+    <p id="description">
+        Vous avez une chambre libre ? Vous souhaitez devenir hébergeur solidaire et faire 
+        parti de l'aventure Merci pour l'invit' ? 
+        <br> <br>
+        Merci pour l'invit' est un projet qui prône l'hébergement solidaire afin de faciliter la 
+        réinsertion socioprofessionnelle de femmes et de jeunes en grande précarité. 
+        <br> <br>
+        Merci pour l'invit' se développe actuellement à BORDEAUX, à PARIS et sa banlieue. 
+        <br> <br>
+        Après avoir rempli ce questionnaire, la responsable "hébergement"vous contactera pour 
+        vous expliquer plus amplement la démarche. La Charte de cohabitation sera signée entre 
+        vous et la personne accueillie lors du début de l'hébergement. 
+        <br> <br>
+        Vous habitez une autre ville ? N'hésitez pas à remplir ce formulaire, notre équipe 
+        vous répondra dès que possible. 
+        <br> <br>
+        Ce questionnaire <b>NE VOUS ENGAGE PAS A HEBERGER.</b>
+        <br> <br>
+        Toutes les informations collectées sont strictement pour l'association, elles ne 
+        seront pas partagées et ne serviront que pour les besoins du projet.
+        <br> <br>
+        <m style='color: red; display: inline-block;'> * Champ obligatoire </m>
+    </p>
+    `;
 
-    form_inner_html.push(create_form_title("Devenez hébergeur pour Merci pour l'invit'"));
-
-    form_inner_html.push(create_form_description());
+    let names = ['Nom','Prénom','Genre','Ville','Code Postal','Adresse',
+    'Numéro de téléphone','Adresse mail', "Nombres d'habitants dans le foyer"];
 
     for(let i = 0;i < names.length ; i++)
     {
-        form_inner_html.push(create_form_text_holder(names[i]));
+        form_inner_html += create_form_text_holder(names[i]);
     };
 
-    let name = "Modalités d'hébergement";
-    let elements = ["Une chambre à part","Canapé-lit",
-                    "Logement entier","Autre"];
-    form_inner_html.push(create_form_drop_down(name,elements));
+    let drop_names = ["Modalités d'hébergement","Durée d'hébergement"];
+    let drop_elements = [["Une chambre à part","Canapé-lit","Logement entier","Autre"],
+    ["Deux semaines","De 1 mois à 3 mois","De 4 mois à 6 mois","6 mois ou plus"]];
 
-    name = "Durée d'hébergement";
-    elements = ["Deux semaines","De 1 mois à 3 mois",
-                   "De 4 mois à 6 mois","6 mois ou plus"];
-    form_inner_html.push(create_form_drop_down(name,elements));
+    for(let i = 0;i < drop_names.length ; i++)
+    {
+        form_inner_html += create_form_drop_down(drop_names[i],drop_elements[i]);
+    };
 
     names = ["A partir de quand pouvez-vous recevoir quelqu'un chez vous?",
-                    "Qu'attendez-vous de cette expérience d'accueil ?",
-                    "Des questions ou commentaires?"];
+    "Qu'attendez-vous de cette expérience d'accueil ?", "Des questions ou commentaires?"];
 
-    let place_holder = ['jj/mm/aaaa','Votre reponse','Votre reponse']
+    let place_holder = ['jj/mm/aaaa','Votre reponse','Votre reponse'];
 
     for(let i = 0;i < names.length ; i++)
     {
-        form_inner_html.push(create_form_text_holder(names[i]));
+        form_inner_html += create_form_text_holder(names[i]);
     };
 
-    form_inner_html.push(create_form_button());
-
-
-
-    form.innerHTML = form_inner_html.join('');
+    form_inner_html += create_form_button();
+    
+    form.innerHTML = form_inner_html;
     
     const form_container = document.createElement('div');
     const form_content = document.createElement('div');
@@ -317,7 +302,7 @@ function submitForm(event)
     fetch(encoded_url);  
 };
 
-create_team_page();
+create_invite_form();
 
 function create_heberger_page(event) 
 {
