@@ -1,11 +1,17 @@
 "use strict";
 
-function create_form_text_holder(name)
+
+// creates the an input given 
+function create_form_text_holder(name,place_holder)
 {
+    if (typeof place_holder === 'undefined') 
+    {
+        place_holder = name.toUpperCase(); 
+    };
     return `<div class="input_container">
                 <label for="${name.toLowerCase()}"><b>${name} : </b></label>
                 <br>
-                <input id="input_${name.toLowerCase()}" type="text" name="${name.toLowerCase()}" placeholder="${name.toUpperCase()}">
+                <input id="input_${name.toLowerCase()}" type="text" name="${name.toLowerCase()}" placeholder="${place_holder}">
                 <span class="focus-input" data-placeholder="${name.toUpperCase()}"></span>
             </div>`;
 };
@@ -69,7 +75,7 @@ function create_form_drop_down(name,elements)
             </div>`;
 };
 
-function create_form(form_name)
+function create_invite_form(form_name)
 {
     const form = document.createElement('form');
 
@@ -119,8 +125,7 @@ function create_form(form_name)
     
 };
 
-
-create_form();
+create_invite_form();
 
 
 const submit = document.querySelector("#envoyer");
