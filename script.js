@@ -169,29 +169,25 @@ function create_main_page()
 
     const main_page = document.createElement('div');
     main_page.setAttribute('id','main_page');
-    
-    const project_MPLI =  document.createElement('img');
-    project_MPLI.setAttribute("scr","project_MPLI.png")
-    project_MPLI.setAttribute("id","big_logo");
-
-    const main_page_text = document.createElement('p');
-    main_page_text.innerHTML =    `<b>Merci pour l'invit'</b> est le premier réseau d'hébergement 
-                        citoyen permettant la réinsertion de femmes en difficulté.
-                        <br> <br>
-                        Le sans abrisme féminin est peu connu, pourtant sur les 200 000 
-                        personnes sans domicile fixe en France (Estimation de la FNARS en 2017), 
-                        40% sont des femmes.
-                        <br> <br>
-                        Pour venir en aide à ces femmes et pallier la saturation actuelle de 
-                        l’hébergement d’urgence, notre solution est simple : héberger chez l’habitant.
-                        <br> <br>
-                        De nombreuses études sur le « housing first » l’ont prouvé, la condition n°1 
-                        vers la réinsertion est la tranquillité permise par un hébergement stable.
-                        <br> <br>`;
-
-    main_page.appendChild(project_MPLI);
-    main_page.appendChild(main_page_text);
-
+    main_page.innerHTML =    
+    `
+    <img id="project_MPLI" src="project_MPLI.png"></img>
+    <p>
+        <b>Merci pour l'invit'</b> est le premier réseau d'hébergement 
+        citoyen permettant la réinsertion de femmes en difficulté.
+        <br> <br>
+        Le sans abrisme féminin est peu connu, pourtant sur les 200 000 
+        personnes sans domicile fixe en France (Estimation de la FNARS en 2017), 
+        40% sont des femmes.
+        <br> <br>
+        Pour venir en aide à ces femmes et pallier la saturation actuelle de 
+        l’hébergement d’urgence, notre solution est simple : héberger chez l’habitant.
+        <br> <br>
+        De nombreuses études sur le « housing first » l’ont prouvé, la condition n°1 
+        vers la réinsertion est la tranquillité permise par un hébergement stable.
+        <br> <br>
+    </p>
+    `;
     const body = document.querySelector('#content');
     content.appendChild(main_page);
 };
@@ -308,7 +304,7 @@ function submitForm(event)
     fetch(encoded_url);  
 };
 
-create_MPLI_page();
+create_main_page();
 
 //Menu navigation
 const acceuil = document.querySelector("#acceuil");
