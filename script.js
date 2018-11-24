@@ -34,11 +34,35 @@ for(let i = 0;i < names.length; i++)
 const submit = document.querySelector("#envoyer");
 submit.addEventListener('click', submitForm);
 
+let data_name = [
+    "Nom",
+    "Prenom",
+    "Genre",
+    "Ville",
+    "Code Postal",
+    "Adresse",
+    "Telephone",
+    "Adresse Email",
+    "Nombres d'habitants",
+    "Modalites d'hebergement",
+    "Q1",
+    "Q2",
+    "Q3"
+]
+let data = [];
 function submitForm(event) {
-    let store = [];
     const data_containers = document.querySelectorAll('.input_container');
     for (let i = 0; i < data_containers.length; i++) {
-        store.push(data_containers[i].querySelector('input').value);
+        data.push(data_containers[i].querySelector('input').value);
     }
-    console.log("We collected the following data:", store);
+
+    let parameters = [];
+    for (let i = 0; i < data.length; i++) {
+        parameters.push(data_name[i] + '=' + data[i]) 
+    }
+
+    let encoded_url = encodeURI(`https://script.google.com/macros/s/AKfycbzTM2nRDBcn4vDs2dTAJTnm7diQakYLrwTDxEGazT0oFMbowL7z/exec?${parameters.join('&')}`);
+    console.log(encoded_url)
+    let window = open(encoded_url);
+    window.close();    
 }
