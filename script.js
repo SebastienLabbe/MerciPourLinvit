@@ -257,3 +257,12 @@ function submitForm(event)
 };
 
 create_main_page();
+
+//Menu navigation
+const acceuil = document.querySelector("#acceuil");
+const mpli = document.querySelector("#mpli");
+const equipe = document.querySelector("#equipe");
+const heberger = document.querySelector("#heberger");
+const faq = document.querySelector("#faq");
+const contacts = document.querySelector("#contacts");
+
