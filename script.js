@@ -23,61 +23,13 @@ function create_form_text_holder(name,place_holder)
     {
         place_holder = name; 
     };
-
     
-
     return `<div class="input_container">
                 <label for="${name.toLowerCase()}"><b> ${shown_name} : </b></label>
                 <br>
                 <input id="input_${name.toLowerCase()}" class="data" type="text" name="${name.toLowerCase()}" placeholder="${place_holder}">
                 <span class="focus-input" data-placeholder="${name.toUpperCase()}"></span>
             </div>`;
-};
-
-// Returns as a string the HTML source code for the title for the form
-function create_form_title(title)
-{
-    return `<div id="form_title">
-                ${title}
-            </div>`;
-};
-
-// Returns as a string the HTML source code for the button for the form
-function create_form_button()
-{
-    return `<div id="form_button">
-                <button id="envoyer" type="button">
-                    Envoyer
-                </button>
-            </div>`;
-};
-
-// Returns as a string the HTML source code for the initial description for the form
-function create_form_description()
-{
-    return `<p1 id="description"> 
-            Vous avez une chambre libre ? 
-            Vous souhaitez devenir hébergeur solidaire et faire parti de l'aventure Merci pour l'invit' ? 
-            <br> <br>
-            Merci pour l'invit' est un projet qui prône l'hébergement solidaire afin de faciliter la 
-            réinsertion socioprofessionnelle de femmes et de jeunes en grande précarité. 
-            <br> <br>
-            Merci pour l'invit' se développe actuellement à BORDEAUX, à PARIS et sa banlieue. 
-            <br> <br>
-            Après avoir rempli ce questionnaire, la responsable "hébergement"vous contactera pour 
-            vous expliquer plus amplement la démarche. La Charte de cohabitation sera signée entre 
-            vous et la personne accueillie lors du début de l'hébergement. 
-            <br> <br>
-            Vous habitez une autre ville ? N'hésitez pas à remplir ce formulaire, notre équipe 
-            vous répondra dès que possible. 
-            <br> <br>
-            Ce questionnaire <b>NE VOUS ENGAGE PAS A HEBERGER.</b>
-            <br> <br>
-            Toutes les informations collectées sont strictement pour l'association, elles ne 
-            seront pas partagées et ne serviront que pour les besoins du projet.
-            <br> <br>
-            <m style='color: red; display: inline-block;'> * Champ obligatoire </m>
-            </p1>`;
 };
 
 // Returns as a string the HTML source code for a drop down menu
@@ -100,60 +52,82 @@ function create_form_drop_down(name,elements)
 };
 
 // Creates the entire form and adds it to the body
-function create_invite_form(form_name)
+function create_invite_form()
 {
     empty_content('content');
 
     const form = document.createElement('form');
 
-    let form_inner_html = [];
+    let form_inner_html = '';
 
-    let names = ['Nom','Prénom','Genre','Ville',
-    'Code Postal','Adresse','Numéro de téléphone',
-    'Adresse mail', "Nombres d'habitants dans le foyer"];
+    form_inner_html += 
+    `
+    <div id="form_title">
+        Devenez hébergeur pour Merci pour l'invit'
+    </div>
+    <p1 id="description">
+        Vous avez une chambre libre ? Vous souhaitez devenir hébergeur solidaire et faire 
+        parti de l'aventure Merci pour l'invit' ? 
+        <br> <br>
+        Merci pour l'invit' est un projet qui prône l'hébergement solidaire afin de faciliter la 
+        réinsertion socioprofessionnelle de femmes et de jeunes en grande précarité. 
+        <br> <br>
+        Merci pour l'invit' se développe actuellement à BORDEAUX, à PARIS et sa banlieue. 
+        <br> <br>
+        Après avoir rempli ce questionnaire, la responsable "hébergement"vous contactera pour 
+        vous expliquer plus amplement la démarche. La Charte de cohabitation sera signée entre 
+        vous et la personne accueillie lors du début de l'hébergement. 
+        <br> <br>
+        Vous habitez une autre ville ? N'hésitez pas à remplir ce formulaire, notre équipe 
+        vous répondra dès que possible. 
+        <br> <br>
+        Ce questionnaire <b>NE VOUS ENGAGE PAS A HEBERGER.</b>
+        <br> <br>
+        Toutes les informations collectées sont strictement pour l'association, elles ne 
+        seront pas partagées et ne serviront que pour les besoins du projet.
+        <br> <br>
+        <m style='color: red; display: inline-block;'> * Champ obligatoire </m>
+    </p1>
+    `;
 
-    form_inner_html.push(create_form_title("Devenez hébergeur pour Merci pour l'invit'"));
-
-    form_inner_html.push(create_form_description());
+    let names = ['Nom','Prénom','Genre','Ville','Code Postal','Adresse',
+    'Numéro de téléphone','Adresse mail', "Nombres d'habitants dans le foyer"];
 
     for(let i = 0;i < names.length ; i++)
     {
-        form_inner_html.push(create_form_text_holder(names[i]));
+        form_inner_html += create_form_text_holder(names[i]);
     };
 
-    let name = "Modalités d'hébergement";
-    let elements = ["Une chambre à part","Canapé-lit",
-                    "Logement entier","Autre"];
-    form_inner_html.push(create_form_drop_down(name,elements));
+    let drop_names = ["Modalités d'hébergement","Durée d'hébergement"];
+    let drop_elements = [["Une chambre à part","Canapé-lit","Logement entier","Autre"],
+    ["Deux semaines","De 1 mois à 3 mois","De 4 mois à 6 mois","6 mois ou plus"]];
 
-    name = "Durée d'hébergement";
-    elements = ["Deux semaines","De 1 mois à 3 mois",
-                   "De 4 mois à 6 mois","6 mois ou plus"];
-    form_inner_html.push(create_form_drop_down(name,elements));
+    for(let i = 0;i < drop_names.length ; i++)
+    {
+        form_inner_html += create_form_drop_down(drop_names[i],drop_elements[i]);
+    };
 
     names = ["A partir de quand pouvez-vous recevoir quelqu'un chez vous?",
-                    "Qu'attendez-vous de cette expérience d'accueil ?",
-                    "Des questions ou commentaires?"];
+    "Qu'attendez-vous de cette expérience d'accueil ?", "Des questions ou commentaires?"];
 
-    let place_holder = ['jj/mm/aaaa','Votre reponse','Votre reponse']
+    let place_holder = ['jj/mm/aaaa','Votre reponse','Votre reponse'];
 
     for(let i = 0;i < names.length ; i++)
     {
-        form_inner_html.push(create_form_text_holder(names[i]));
+        form_inner_html += create_form_text_holder(names[i],place_holder[i]);
     };
 
-    form_inner_html.push(create_form_button());
-
-
-
-    form.innerHTML = form_inner_html.join('');
+    form_inner_html += `<div id="form_button">
+                            <button id="envoyer" type="button">
+                                Envoyer
+                            </button>
+                        </div>`;
+    
+    form.innerHTML = form_inner_html;
     
     const form_container = document.createElement('div');
-    const form_content = document.createElement('div');
-    form_content.setAttribute("class","form_content");
     form_container.setAttribute("class","form_container")
-    form_content.appendChild(form);
-    form_container.appendChild(form_content);
+    form_container.appendChild(form);
 
     const content = document.querySelector('#content');
     content.appendChild(form_container);
@@ -188,6 +162,65 @@ function create_main_page()
     </p>
     `;
 };
+
+// Create FAQ page
+function create_faq_page()
+{
+    empty_content('content');
+}
+
+// Create contacts page
+function create_contacts_page()
+{
+    empty_content('content');
+    
+    const contacts_page = document.createElement('div');
+    contacts_page.setAttribute('id','contacts_page');
+
+    contacts_page.innerHTML = 
+    `
+    <div class="boxTopRed">
+        <b>
+            CONTACT : 
+            <br><br>
+            Contact Merci pour l’invit’
+        </b>
+        <br>
+        Email : 
+        <a href="mailto:margaux@solinum.org">
+            margaux@solinum.org
+        </a>
+        <br>
+        Page Facebook : 
+        <a href="https://www.facebook.com/mercipourlinvit">
+            https://www.facebook.com/mercipourlinvit
+        </a>
+        <br>
+        Tel : 06 71 20 82 79 (9h30h - 18h30 en semaine).
+        <br>
+        <br>
+        Pour vous inscrire en tant qu'hébergeur.se, remplissez le formulaire.
+        <br>
+        <button onclick="create_invite_form()">
+            Offrir un hébergement
+        </button>
+        <br><br>
+        Les demandes d’hébergements peuvent être envoyées à 
+        <a href="mailto:margaux@solinum.org">
+            margaux@solinum.org
+        </a> 
+         ou sur notre 
+        <a href="https://www.facebook.com/mercipourlinvit/">
+        page facebook
+        </a>
+    </div>
+		
+    `;
+
+    const content = document.querySelector('#content');
+    content.appendChild(contacts_page);
+
+}
 
 // Create project MPLI page
 function create_MPLI_page()
@@ -320,6 +353,8 @@ function submitForm(event)
     let encoded_url = encodeURI(`https://script.google.com/macros/s/AKfycbzTM2nRDBcn4vDs2dTAJTnm7diQakYLrwTDxEGazT0oFMbowL7z/exec?${parameters.join('&')}`);
     fetch(encoded_url);  
 };
+
+create_contacts_page();
 
 function create_heberger_page(event) 
 {

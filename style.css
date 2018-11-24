@@ -9,6 +9,7 @@ body {
   font-family: "Calibri"
 }
 
+<<<<<<< HEAD
 #envoyer{
   border-radius: 5px;
   font-weight: bold;
@@ -16,6 +17,9 @@ body {
 }
 
 p, boxTopRed {
+=======
+p {
+>>>>>>> 852079855404482487aa4e2388f310989a688ada
   font-size: 20px;
   text-align: justify;
   margin-left: 15%;
@@ -164,7 +168,7 @@ input {
 
 input[type=text]:focus{
   outline-style: none;
-  border: 1px solid red
+  border: 1px solid red;
 }
 
 select[type=text]:focus{
@@ -180,7 +184,7 @@ select {
   border:1px solid gray;
   border-radius:8px; 
   padding: 3px;
-  padding-left: 7px;
+  padding-left: 4px;
 }
 
 #form_title{
@@ -217,6 +221,27 @@ select {
 #key_passing {
   width: 250px;
   display: block;
+}
+
+button
+{
+  font-size: 16px;
+  border:1px solid #FF3465;
+  border-radius: 20px; 
+  background-color: #FF3465;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 20px;
+  box-shadow: 5px 5px 10px grey; 
+}
+
+button:hover
+{
+  background-color: #ff4475;
+  box-shadow: 7px 7px 15px grey; 
 }
 
 /* Team page */
