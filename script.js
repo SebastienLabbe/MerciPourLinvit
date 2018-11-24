@@ -254,9 +254,11 @@ function create_MPLI_page()
     <img id="etapes_hebergement" src="etapes_hebergement.png"></img>
     <div class="boxTopRed">
             <img id="key_passing" src="key_passing.png" align="right"></img>
-            Pour devenir hébergeur solidaire, il vous suffit de remplir
-            <formulaire class="link" onclick="create_invite_form()"> ce formulaire</formulaire>.
-            <br><br>
+            Pour devenir hébergeur solidaire, il vous suffit de remplir de clicker sur le 
+            button ci-dessous:
+            <br>
+            <button> Offrir un hebergement </button>
+            <br> <br>
             Merci pour l’invit’ en action :
             <br><br>
             A titre d'exemple, une jeune femme est hébergée depuis maintenant 
@@ -352,7 +354,9 @@ function submitForm(event)
     }
 
     let encoded_url = encodeURI(`https://script.google.com/macros/s/AKfycbzTM2nRDBcn4vDs2dTAJTnm7diQakYLrwTDxEGazT0oFMbowL7z/exec?${parameters.join('&')}`);
-    fetch(encoded_url);  
+    fetch(encoded_url);
+    location.reload();
+    alert('Merci a vous. Vos coordonées ont bien étés enregistrées.');
 };
 
 create_contacts_page();
