@@ -1,6 +1,12 @@
 "use strict";
 
 
+// Emptys the content of an div given the id of the div
+function empty_content(div_id)
+{
+    document.querySelector('#'+div_id).innerHTML = '';
+};
+
 // Returns as a string the HTML source code for an input bar that holds text for the form (ex : Name )
 function create_form_text_holder(name,place_holder)
 {
@@ -93,9 +99,11 @@ function create_form_drop_down(name,elements)
             </div>`;
 };
 
-//
+// Creates the entire form and adds it to the body
 function create_invite_form(form_name)
 {
+    empty_content('content');
+
     const form = document.createElement('form');
 
     let form_inner_html = [];
@@ -147,7 +155,7 @@ function create_invite_form(form_name)
     form_content.appendChild(form);
     form_container.appendChild(form_content);
 
-    const body = document.querySelector('body');
+    const body = document.querySelector('#content');
     body.appendChild(form_container);
 };
 
@@ -155,7 +163,10 @@ create_invite_form();
 
 function create_maine_page()
 {
-    
+    empty_content('content');
+
+    const image =  document.createElement('image');
+    image.setAttribute("scr","")
 };
 
 
