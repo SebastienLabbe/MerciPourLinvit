@@ -41,21 +41,30 @@ body {
   display:flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  text-align: left;
 
   margin: auto;
   margin-top: 60px;
   margin-bottom: 60px;
+  padding: 40px;
   padding-top: 40px;
   padding-bottom: 40px;
-  width: 80vw;
+
+  width: 50vw;
   border-radius: 10px;
   background-color: #f0f0f0;
   font-family: 'Note Sans SC', sans-serif;
 }
 
 input {
+  margin-bottom: 25px;
+  width: 80%;
+  height: 30px;
   border:1px solid gray;
   border-radius:8px; 
   padding: 5px; 
+}
+
+form {
+  display: block
 }
