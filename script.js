@@ -155,42 +155,65 @@ function create_invite_form(form_name)
     form_content.appendChild(form);
     form_container.appendChild(form_content);
 
-    const body = document.querySelector('#content');
-    body.appendChild(form_container);
+    const content = document.querySelector('#content');
+    content.appendChild(form_container);
+
+    const submit = document.querySelector("#envoyer");
+    submit.addEventListener('click', submitForm);
 };
 
-create_invite_form();
-
-function create_maine_page()
+// Creates the main page
+function create_main_page()
 {
     empty_content('content');
 
+    const main_page = document.createElement('div');
+    main_page.setAttribute('id','main_page');
+    
     const image =  document.createElement('image');
-    image.setAttribute("scr","")
+    image.setAttribute("scr","image accueil MPLI.png")
+    image.setAttribute("id","big_logo");
+
+    const text = document.createElement('p');
+    text.innerHTML =    `<b>Merci pour l'invit'</b> est le premier réseau d'hébergement 
+                        citoyen permettant la réinsertion de femmes en difficulté.
+                        <br> <br>
+                        Le sans abrisme féminin est peu connu, pourtant sur les 200 000 
+                        personnes sans domicile fixe en France (Estimation de la FNARS en 2017), 
+                        40% sont des femmes.
+                        <br> <br>
+                        Pour venir en aide à ces femmes et pallier la saturation actuelle de 
+                        l’hébergement d’urgence, notre solution est simple : héberger chez l’habitant.
+                        <br> <br>
+                        De nombreuses études sur le « housing first » l’ont prouvé, la condition n°1 
+                        vers la réinsertion est la tranquillité permise par un hébergement stable.
+                        <br> <br>`;
+
+    const body = document.querySelector('#content');
+    content.appendChild(image);
+    content.appendChild(text);
 };
 
-
-const submit = document.querySelector("#envoyer");
-submit.addEventListener('click', submitForm);
-
-let data_name = [
-    "Nom",
-    "Prenom",
-    "Genre",
-    "Ville",
-    "Code Postal",
-    "Adresse",
-    "Telephone",
-    "Adresse Email",
-    "Nombres d'habitants",
-    "Modalites d'hebergement",
-    "Duree d'hebergement",
-    "Q1",
-    "Q2",
-    "Q3"
-]
-let data = [];
-function submitForm(event) {
+// Trys to submit form
+function submitForm(event) 
+{
+    let data_name = [
+        "Nom",
+        "Prenom",
+        "Genre",
+        "Ville",
+        "Code Postal",
+        "Adresse",
+        "Telephone",
+        "Adresse Email",
+        "Nombres d'habitants",
+        "Modalites d'hebergement",
+        "Duree d'hebergement",
+        "Q1",
+        "Q2",
+        "Q3"
+    ]
+    let data = [];
     const data_containers = document.querySelectorAll('.input_container');
     console.log(data_containers);
     for (let i = 0; i < data_containers.length; i++) {
@@ -211,4 +234,6 @@ function submitForm(event) {
 
     let encoded_url = encodeURI(`https://script.google.com/macros/s/AKfycbzTM2nRDBcn4vDs2dTAJTnm7diQakYLrwTDxEGazT0oFMbowL7z/exec?${parameters.join('&')}`);
     fetch(encoded_url);  
-}
+};
+
+create_main_page();
