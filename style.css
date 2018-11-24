@@ -53,3 +53,9 @@ body {
   background-color: #f0f0f0;
   font-family: 'Note Sans SC', sans-serif;
 }
+
+input {
+  border:1px solid gray;
+  border-radius:8px; 
+  padding: 5px; 
+}
