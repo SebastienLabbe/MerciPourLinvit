@@ -2,7 +2,7 @@
 
 
 // creates the an input given 
-function create_form_text_holder(name,place_holder)
+function create_form_text_holder(name, place_holder)
 {
     if (typeof place_holder === 'undefined') 
     {
@@ -18,9 +18,9 @@ function create_form_text_holder(name,place_holder)
 
 function create_form_title(title)
 {
-    return `<span id="form_title">
+    return `<div id="form_title">
                 ${title}
-            </span>`;
+            </div>`;
 };
 
 function create_form_button()
@@ -30,7 +30,6 @@ function create_form_button()
                     Envoyer
                 </button>
             </div>`;
-
 };
 
 function create_form_description()
@@ -38,21 +37,21 @@ function create_form_description()
     return `<p id="description">
             Vous avez une chambre libre ? 
             Vous souhaitez devenir hébergeur solidaire et faire parti de l'aventure Merci pour l'invit' ? 
-            <br>
+            <br> <br>
             Merci pour l'invit' est un projet qui prône l'hébergement solidaire afin de faciliter la 
             réinsertion socioprofessionnelle de femmes et de jeunes en grande précarité. 
-            <br>
+            <br> <br>
             Merci pour l'invit' se développe actuellement à BORDEAUX, à PARIS et sa banlieue. 
-            <br>
+            <br> <br>
             Après avoir rempli ce questionnaire, la responsable "hébergement"vous contactera pour 
             vous expliquer plus amplement la démarche. La Charte de cohabitation sera signée entre 
             vous et la personne accueillie lors du début de l'hébergement. 
-            <br>
+            <br> <br>
             Vous habitez une autre ville ? N'hésitez pas à remplir ce formulaire, notre équipe 
             vous répondra dès que possible. 
-            <br>
+            <br> <br>
             Ce questionnaire <b>NE VOUS ENGAGE PAS A HEBERGER.</b>
-            <br>
+            <br> <br>
             Toutes les informations collectées sont strictement pour l'association, elles ne 
             seront pas partagées et ne serviront que pour les besoins du projet.
             </p>`;
@@ -81,28 +80,29 @@ function create_invite_form(form_name)
 
     let form_inner_html = [];
 
-    let names = ['Nom','Prénom','Genre','Ville',
+    let mandatory = "<span style='color: red; display: inline-block;'>* </span>"
+    let names = ['Nom','Prénom  ','Genre','Ville',
     'Code Postal','Adresse','Numéro de téléphone',
     'Adresse mail', "Nombres d'habitants dans le foyer"];
 
-    form_inner_html.push(create_form_title("Devenez hébergeur pour Merci pour l'invit"));
+    form_inner_html.push(create_form_title("Devenez hébergeur pour Merci pour l'invit'"));
 
     form_inner_html.push(create_form_description());
 
     for(let i = 0;i < names.length ; i++)
     {
-        form_inner_html.push(create_form_text_holder(names[i]));
+        form_inner_html.push(create_form_text_holder(names[i] + mandatory));
     };
 
     let name = "Modalités d'hébergement";
     let elements = ["Une chambre à part","Canapé-lit",
                     "Logement entier","Autre"];
-    form_inner_html.push(create_form_drop_down(name,elements));
+    form_inner_html.push(create_form_drop_down(name + mandatory ,elements));
 
     name = "Durée d'hébergement";
     elements = ["Deux semaines","De 1 mois à 3 mois",
                    "De 4 mois à 6 mois","6 mois ou plus"];
-    form_inner_html.push(create_form_drop_down(name,elements));
+    form_inner_html.push(create_form_drop_down(name + mandatory ,elements));
 
     names = ["A partir de quand pouvez-vous recevoir quelqu'un chez vous?",
                     "Qu'attendez-vous de cette expérience d'accueil ?",
@@ -110,7 +110,9 @@ function create_invite_form(form_name)
 
     for(let i = 0;i < names.length ; i++)
     {
-        form_inner_html.push(create_form_text_holder(names[i]));
+        if (i == 2) form_inner_html.push(create_form_text_holder(names[i]));
+        else form_inner_html.push(create_form_text_holder(names[i]) + mandatory);
+        
     };
 
     form_inner_html.push(create_form_button());

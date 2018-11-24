@@ -61,7 +61,7 @@ body {
   background-color: #f0f0f0;
   font-family: 'Note Sans SC', sans-serif;
 
-  border-top: solid rgb(255, 188, 101) 5px;
+  border-top: solid rgb(255, 188, 101) 2px;
 }
 
 form {
@@ -96,4 +96,13 @@ select {
 #form_title{
   font-size: 32px;
   font-weight: bold;
+  justify-content: center;
+  text-align: center !important;
+}
+
+#description {
+  text-align: justify;
+  text-justify: inter-word;
+  padding-left: 5%;
+  padding-right: 5%;
 }
