@@ -584,7 +584,7 @@
   
   
   @keyframes beatbtn {
-    0% {
+    0% {    
       background-color: rgba(255, 75, 90, 1);
       transform-origin: center;
       -webkit-transform: scale(1);
