@@ -2,7 +2,7 @@ body {
   justify-content: center;
   text-align: center;
   margin: 0px;
-  background-color: rgb(251, 222, 252);
+  background-color: rgb(255, 225, 230);
 }
 
 .menu {
@@ -62,7 +62,8 @@ body {
 }
 
 input {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  margin-top: 4px;
   width: 80%;
   height: 30px;
   border:1px solid gray;
