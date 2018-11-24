@@ -1,12 +1,28 @@
 /*general*/
 body {
   padding-top: 60px;
+  padding-bottom: 20px;
   justify-content: center;
   text-align: center;
   margin: 0px;
   background-color: whitesmoke;
   cursor: default;
   font-family: "Calibri"
+}
+
+#background_image_left {
+  top: 40vh;
+  left: 0;
+  width: 15%;
+  position: fixed;
+  z-index: -1;
+}
+#background_image_right {
+  top: 40vh;
+  right: 0;
+  width: 15%;
+  position: fixed;
+  z-index: -1;
 }
 
 p, .boxTopRed {
@@ -203,7 +219,7 @@ select {
 
 /* MPLI */
 #etapes_hebergement {
-  width: 80%;
+  width: 90%;
   margin-top: 40px;
   margin-bottom: 40px;
 }
