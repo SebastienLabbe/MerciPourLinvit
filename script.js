@@ -127,6 +127,11 @@ function create_invite_form(form_name)
 
 create_invite_form();
 
+function create_maine_page()
+{
+    
+};
+
 
 const submit = document.querySelector("#envoyer");
 submit.addEventListener('click', submitForm);
