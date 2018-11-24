@@ -234,7 +234,6 @@ function create_MPLI_page()
     MPLI_project_page.innerHTML = 
     `
     <div class="boxTopRed">
-        <p>
             <b>Merci pour l'invit'</b> est le premier 
             réseau d'hébergement citoyen permettant la réinsertion de femmes en difficulté.
             <br><br>
@@ -250,12 +249,10 @@ function create_MPLI_page()
             Merci pour l'invit' assure durant la durée de l’hébergement un accompagnement 
             social permettant d’inscrire l’accueilli dans un parcours de réinsertion.
             <br><br>
-        </p>
     </div>
     <span class="emphasize"> L'hébergement solidaire se déroule donc en 6 étapes : </span>
     <img id="etapes_hebergement" src="etapes_hebergement.png"></img>
     <div class="boxTopRed">
-        <p>
             <img id="key_passing" src="key_passing.png" align="right"></img>
             Pour devenir hébergeur solidaire, il vous suffit de remplir
             <formulaire class="link" onclick="create_form_page()"> ce formulaire</formulaire>.
@@ -272,7 +269,6 @@ function create_MPLI_page()
             <br><br>
             Au-delà de l’hébergement, c’est aussi un lien social durable et 
             des mises en réseaux qui sont permises par l’hébergement l’habitant.
-        </p>
     </div>
     `;
 

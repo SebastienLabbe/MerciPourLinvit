@@ -43,6 +43,7 @@ p, .boxTopRed {
 }
 
 .emphasize {
+  margin-top: 50px;
   font-size: 26px;
   font-weight: bold;
 }
@@ -212,9 +213,10 @@ select {
 
 #menu_logo {
   display: block;
-  width: 5%;
+  width:100px;
   height: auto;
-  padding-left: 5%;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 
 /* MPLI */
@@ -242,6 +244,7 @@ button
   padding-bottom: 8px;
   margin-top: 20px;
   box-shadow: 5px 5px 10px grey; 
+  outline-style: none;
 }
 
 button:hover
@@ -270,7 +273,8 @@ button:hover
   width: 100vw;
   display: inline-block;
   justify-content: center;
-  vertical-align: middle;}
+  vertical-align: middle !important;
+}
 
 .name {
   font-size: 36px;
