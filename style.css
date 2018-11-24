@@ -80,10 +80,6 @@ input[type=text]:focus{
   outline-style: none;
 }
 
-select:focus{
-  outline-style: none;
-}
-
 select {
   margin-bottom: 20px;
   margin-top: 4px;
@@ -92,4 +88,9 @@ select {
   border:1px solid gray;
   border-radius:8px; 
   padding: 5px; 
+}
+
+#form_title{
+  font-size: 32px;
+  font-weight: bold;
 }
