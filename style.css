@@ -9,6 +9,12 @@ body {
   font-family: "Calibri"
 }
 
+#envoyer{
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 5px;  
+}
+
 p {
   font-size: 20px;
   text-align: justify;
