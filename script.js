@@ -27,6 +27,31 @@ function create_form_button()
 
 };
 
+function create_form_description()
+{
+    return `<p id="description">
+            Vous avez une chambre libre ? 
+            Vous souhaitez devenir hébergeur solidaire et faire parti de l'aventure Merci pour l'invit' ? 
+            <br>
+            Merci pour l'invit' est un projet qui prône l'hébergement solidaire afin de faciliter la 
+            réinsertion socioprofessionnelle de femmes et de jeunes en grande précarité. 
+            <br>
+            Merci pour l'invit' se développe actuellement à BORDEAUX, à PARIS et sa banlieue. 
+            <br>
+            Après avoir rempli ce questionnaire, la responsable "hébergement"vous contactera pour 
+            vous expliquer plus amplement la démarche. La Charte de cohabitation sera signée entre 
+            vous et la personne accueillie lors du début de l'hébergement. 
+            <br>
+            Vous habitez une autre ville ? N'hésitez pas à remplir ce formulaire, notre équipe 
+            vous répondra dès que possible. 
+            <br>
+            Ce questionnaire <b>NE VOUS ENGAGE PAS A HEBERGER.</b>
+            <br>
+            Toutes les informations collectées sont strictement pour l'association, elles ne 
+            seront pas partagées et ne serviront que pour les besoins du projet.
+            </p>`;
+};
+
 function create_form_drop_down(name,elements)
 {
     let drops = [];
@@ -54,7 +79,9 @@ function create_form(form_name)
     'Code Postal','Adresse','Numéro de téléphone',
     'Adresse mail', "Nombres d'habitants dans le foyer"];
 
-    form_inner_html.push(create_form_title('Invite'));
+    form_inner_html.push(create_form_title("Devenez hébergeur pour Merci pour l'invit"));
+
+    form_inner_html.push(create_form_description());
 
     for(let i = 0;i < names.length ; i++)
     {
