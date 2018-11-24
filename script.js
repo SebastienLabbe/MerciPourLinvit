@@ -5,7 +5,7 @@ function create_form_text_holder(name)
     return `<div class="input_container">
                 <label for="${name.toLowerCase()}"><b>${name} : </b></label>
                 <br>
-                <input id="input_${name.toLowerCase()}" type="text" name="${name.toLowerCase()}" placeholder="${name.toUpperCase()}">
+                <input id="input_${name.toLowerCase()}" class="data" type="text" name="${name.toLowerCase()}" placeholder="${name.toUpperCase()}">
                 <span class="focus-input" data-placeholder="${name.toUpperCase()}"></span>
             </div>`;
 };
@@ -62,7 +62,7 @@ function create_form_drop_down(name,elements)
     return `<div class="input_container">
                 <label for="${name.toLowerCase()}"><b>${name} : </b></label>
                 <br>
-                <select name="${name.toLowerCase()}">
+                <select class="data" name="${name.toLowerCase()}">
                 ${drops.join('')}
                 </select>
                 <span class="focus-input" data-placeholder="${name.toUpperCase()}"></span>
@@ -137,15 +137,17 @@ let data_name = [
     "Adresse Email",
     "Nombres d'habitants",
     "Modalites d'hebergement",
+    "Duree d'hebergement",
     "Q1",
     "Q2",
     "Q3"
 ]
 let data = [];
 function submitForm(event) {
+    console.log('clicked')
     const data_containers = document.querySelectorAll('.input_container');
     for (let i = 0; i < data_containers.length; i++) {
-        data.push(data_containers[i].querySelector('input').value);
+        data.push(data_containers[i].querySelector('.data').value);
     }
 
     let parameters = [];
