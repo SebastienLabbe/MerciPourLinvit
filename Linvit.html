@@ -9,15 +9,41 @@
 </head>
 <body>
     <nav class="menu">
-        <a href="#Accueil">Accueil</a>
-        <a href="#Apropos">À propos</a>
-        <a href="#Contact">Contact</a>
+            <a href="#Accueil">Menu</a>
+            <a href="#Apropos">Demande une Invite</a>
+            <a href="#Contact">Invite</a>
     </nav>
     <div class="form_container">
         <div class="form_content">
-            <span class="form_title">
-                Demande une Invite
-            </span>
+                <form class="demande_form validate-form">
+                        <span class="demande-form-title">
+                            Title
+                        </span>
+    
+                        <div class="wrap-input validate-input" data-validate="Name is required">
+                            <input class="input2" type="text" name="name">
+                            <span class="focus-input2" data-placeholder="NAME"></span>
+                        </div>
+    
+                        <div class="wrap-input validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                            <input class="input2" type="text" name="email">
+                            <span class="focus-input2" data-placeholder="EMAIL"></span>
+                        </div>
+    
+                        <div class="wrap-input validate-input" data-validate = "Message is required">
+                            <textarea class="input2" name="message"></textarea>
+                            <span class="focus-input2" data-placeholder="MESSAGE"></span>
+                        </div>
+    
+                        <div class="container-contact2-form-btn">
+                            <div class="wrap-contact2-form-btn">
+                                <div class="contact2-form-bgbtn"></div>
+                                <button class="contact2-form-btn">
+                                    Send Your Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
         </div>
     </div>
 </body>
