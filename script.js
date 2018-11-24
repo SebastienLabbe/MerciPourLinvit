@@ -166,7 +166,12 @@ function create_maine_page()
     empty_content('content');
 
     const image =  document.createElement('image');
-    image.setAttribute("scr","")
+    image.setAttribute("scr","x.png")
+    image.setAttribute("id","big_logo")
+
+    const text = document.createElement('p');
+    
+
 };
 
 
