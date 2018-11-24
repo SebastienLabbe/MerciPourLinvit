@@ -169,29 +169,27 @@ function create_main_page()
 
     const main_page = document.createElement('div');
     main_page.setAttribute('id','main_page');
-    
-    const project_MPLI =  document.createElement('img');
-    project_MPLI.setAttribute("scr","project_MPLI.png")
-    project_MPLI.setAttribute("id","big_logo");
-
-    const main_page_text = document.createElement('p');
-    main_page_text.innerHTML =    `<b>Merci pour l'invit'</b> est le premier réseau d'hébergement 
-                        citoyen permettant la réinsertion de femmes en difficulté.
-                        <br> <br>
-                        Le sans abrisme féminin est peu connu, pourtant sur les 200 000 
-                        personnes sans domicile fixe en France (Estimation de la FNARS en 2017), 
-                        40% sont des femmes.
-                        <br> <br>
-                        Pour venir en aide à ces femmes et pallier la saturation actuelle de 
-                        l’hébergement d’urgence, notre solution est simple : héberger chez l’habitant.
-                        <br> <br>
-                        De nombreuses études sur le « housing first » l’ont prouvé, la condition n°1 
-                        vers la réinsertion est la tranquillité permise par un hébergement stable.
-                        <br> <br>`;
-
-    const content = document.querySelector('#content');
-    content.appendChild(project_MPLI);
-    content.appendChild(main_page_text);
+    main_page.innerHTML =    
+    `
+    <img id="project_MPLI" src="project_MPLI.png"></img>
+    <p>
+        <b>Merci pour l'invit'</b> est le premier réseau d'hébergement 
+        citoyen permettant la réinsertion de femmes en difficulté.
+        <br> <br>
+        Le sans abrisme féminin est peu connu, pourtant sur les 200 000 
+        personnes sans domicile fixe en France (Estimation de la FNARS en 2017), 
+        40% sont des femmes.
+        <br> <br>
+        Pour venir en aide à ces femmes et pallier la saturation actuelle de 
+        l’hébergement d’urgence, notre solution est simple : héberger chez l’habitant.
+        <br> <br>
+        De nombreuses études sur le « housing first » l’ont prouvé, la condition n°1 
+        vers la réinsertion est la tranquillité permise par un hébergement stable.
+        <br> <br>
+    </p>
+    `;
+    const body = document.querySelector('#content');
+    content.appendChild(main_page);
 };
 
 // Create project MPLI page
@@ -308,32 +306,40 @@ function submitForm(event)
 
 create_main_page();
 
-function create_heberger_page(event) {
+function create_heberger_page(event) 
+{
     empty_content('content');
 
     const page = document.createElement('div');
-    page.innerHTML = `
-    <p class="emphasize"> Pour offrir un hébergement, cliquez <a class="link" onclick="create_invite_form()"> ici </a>. </p> <br> <br>
-<p> Pour pallier la saturation actuelle de l’hébergement d’urgence, notre solution est simple :
-faciliter l’hébergement chez l’habitant des femmes en exclusion.
-A travers Merci pour l’invit’, nous souhaitons permettre à chaqu’un d’entre vous de
-s’engager en prêtant une chambre libre pendant une durée déterminée d’au moins deux
-semaines afin de faciliter la réinsertion de femmes en difficulté.
+    page.innerHTML = 
+    `
+    <p class="emphasize"> 
+        Pour offrir un hébergement, cliquez <a class="link" onclick="create_invite_form()"> ici </a>. 
+    </p> 
+    <br> <br>
+    <p>
+        Pour pallier la saturation actuelle de l’hébergement d’urgence, notre solution est simple :
+        faciliter l’hébergement chez l’habitant des femmes en exclusion.
+        A travers Merci pour l’invit’, nous souhaitons permettre à chaqu’un d’entre vous de
+        s’engager en prêtant une chambre libre pendant une durée déterminée d’au moins deux
+        semaines afin de faciliter la réinsertion de femmes en difficulté.
 
-Bien évidemment, rien ne peut se faire sans le tissu associatif local : ainsi, nous
-travaillons sur prescription des organismes qui orientent des femmes souhaitant se réinsérer
-vers notre dispositif. Au cours de l’hébergement, la personne hébergée continue d’être suivie
-par l’association l’ayant orientée.
-L’hébergeur n’est pas seul dans sa démarche : il est accompagné par un dispositif lui
-permettant d’être mis en confiance, et éviter les remises à la rue. Ainsi, nous mettons en place
-des outils accompagnantl’hébergement afin qu’il se passe en toute quiétude, tels qu’une
-charte signée au début de l’hébergement.
-L’hébergement se fait à titre gratuit et pour une période de deux semaines minimum. Vous
-n’avez pas à contribuer à ses frais de nourriture ou de transport même si vous êtes
-évidemment libre de le faire. L’équipe de Merci pour l’invit’ vous accompagne tout au long
-de la cohabitation.
-Pour en savoir plus sur les modalités de l’hébergement, vous pouvez lire la FAQ
-Hébergement. </p>`
+        Bien évidemment, rien ne peut se faire sans le tissu associatif local : ainsi, nous
+        travaillons sur prescription des organismes qui orientent des femmes souhaitant se réinsérer
+        vers notre dispositif. Au cours de l’hébergement, la personne hébergée continue d’être suivie
+        par l’association l’ayant orientée.
+        L’hébergeur n’est pas seul dans sa démarche : il est accompagné par un dispositif lui
+        permettant d’être mis en confiance, et éviter les remises à la rue. Ainsi, nous mettons en place
+        des outils accompagnantl’hébergement afin qu’il se passe en toute quiétude, tels qu’une
+        charte signée au début de l’hébergement.
+        L’hébergement se fait à titre gratuit et pour une période de deux semaines minimum. Vous
+        n’avez pas à contribuer à ses frais de nourriture ou de transport même si vous êtes
+        évidemment libre de le faire. L’équipe de Merci pour l’invit’ vous accompagne tout au long
+        de la cohabitation.
+        Pour en savoir plus sur les modalités de l’hébergement, vous pouvez lire la FAQ
+        Hébergement. 
+    </p>
+    `
     document.querySelector("#content").appendChild(page);
 }
 
