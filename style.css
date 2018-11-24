@@ -103,14 +103,11 @@ input[type=text]:focus{
   border: 1px solid red
 }
 
-<<<<<<< HEAD
-=======
 select[type=text]:focus{
   outline-style: none;
   border: 1px solid black;
 }
 
->>>>>>> e72be189282fb1b278ea7e3dabcf5531dad51152
 select {
   margin-bottom: 20px;
   margin-top: 4px;
