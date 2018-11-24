@@ -44,8 +44,10 @@ body {
   text-align: center;
 
   margin: auto;
-  margin-top: 40px;
-  height: 75vh;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   width: 80vw;
   border-radius: 8px;
   background-color: #f0f0f0;
