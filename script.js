@@ -1,9 +1,9 @@
 "use strict";
 
-
 // Emptys the content of an div given the id of the div
 function empty_content(div_id)
 {
+    console.log('entered');
     document.querySelector('#'+div_id).innerHTML = '';
 };
 
@@ -294,7 +294,10 @@ function create_team_page()
     const team_page = document.createElement('div');
     team_page.setAttribute('id','team_page');
 
-    let names = ["Victoria Mandefield","Yanisse Riffi","Terrerias Margaux"];
+    const team_members = document.createElement('div');
+    team_members.setAttribute('id','team_members');
+
+    let names = ["Victoria&nbspMandefield","Yanisse&nbspRiffi","Terrerias&nbspMargaux"];
     let links = ["https://www.linkedin.com/in/victoriamandefield",
                 "https://www.linkedin.com/in/yassiner/",
                 "https://www.linkedin.com/in/margaux-tarrerias-b20129134/"];
@@ -303,12 +306,12 @@ function create_team_page()
     let image_links = ["victoria_mandefield","yassine_riffi","margaux_tarrerias"];
     for(let i = 0; i<3;i++)
     {
-        team_page.innerHTML += 
+        team_members.innerHTML += 
         `
         <div class="team_member">
-		    <img class="team_member_image" src="${image_links[i]}.png">
+		    <a href="${links[i]}"> <img class="team_member_image" src="${image_links[i]}.png"> </a>
 			<div class="team_member_description">
-				<h5 class="name"><a href="${links[i]}">${names[i]}</a></h5>
+				<a class="name" href="${links[i]}">${names[i]}</a> <br>
 				${roles[i]}
 			</div>
 		</div>
@@ -317,6 +320,7 @@ function create_team_page()
 
     const content = document.querySelector('#content');
     content.appendChild(team_page);
+    team_page.appendChild(team_members);
 };
 
 // Trys to submit form
@@ -370,9 +374,9 @@ function create_heberger_page(event)
     const page = document.createElement('div');
     page.innerHTML = 
     `
-    <p class="emphasize"> 
+    <span class="emphasize"> 
         Pour offrir un hébergement, cliquez <a class="link" onclick="create_invite_form()"> ici </a>. 
-    </p> 
+    </span> 
     <br> <br>
     <p>
         Pour pallier la saturation actuelle de l’hébergement d’urgence, notre solution est simple :
@@ -415,3 +419,8 @@ equipe.addEventListener('click', create_team_page);
 //faq.addEventListener('click', create_faq_page);
 heberger.addEventListener('click', create_heberger_page);
 //contacts.addEventListener('click', create_contacts_page);
+
+
+
+
+create_team_page();

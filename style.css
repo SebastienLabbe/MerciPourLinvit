@@ -9,6 +9,12 @@ body {
   font-family: "Calibri"
 }
 
+#envoyer{
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 5px;  
+}
+
 p {
   font-size: 20px;
   text-align: justify;
@@ -63,7 +69,6 @@ p {
   color: white;
   font-weight: bold;
   font-size: 20px;
-  font: 'Note Sans SC', sans-serif;
   text-decoration: none;
   height: 100%;
   width: 100%;
@@ -175,7 +180,7 @@ select {
   border:1px solid gray;
   border-radius:8px; 
   padding: 3px;
-  padding-left: 7px;
+  padding-left: 4px;
 }
 
 #form_title{
@@ -233,4 +238,39 @@ button:hover
 {
   background-color: #ff4475;
   box-shadow: 7px 7px 15px grey; 
+/* Team page */
+#team_page {
+  margin: 0px !important;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#team_members {
+  width: 100vw;
+  display: inline-block;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.name {
+  font-size: 36px;
+  text-decoration: none !important;
+  color: blue !important;
+}
+
+.team_member {
+  display: inline-block;
+  margin: auto;
+}
+
+.team_member_image {
+  height: 200px;
+  transition: height 0.5s;
+}
+
+.team_member_image:hover {
+  height: 300px;
+  transition: height 0.3s;
 }
