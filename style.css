@@ -235,15 +235,21 @@ select {
   vertical-align: middle;
 }
 
+#team_members:hover {
+  width: 100vw;
+  display: inline-block;
+  justify-content: center;
+  vertical-align: middle;}
+
 .name {
   font-size: 36px;
   text-decoration: none !important;
-  color: blue !important;
+  color: rgb(37, 37, 255) !important;
 }
 
 .team_member {
   display: inline-block;
-  margin: auto;
+  margin: 20px;
 }
 
 .team_member_image {
@@ -252,6 +258,7 @@ select {
 }
 
 .team_member_image:hover {
-  height: 300px;
+  height: 250px;
   transition: height 0.3s;
+  
 }
