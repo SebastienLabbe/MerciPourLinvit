@@ -189,14 +189,9 @@ function create_main_page()
                         vers la réinsertion est la tranquillité permise par un hébergement stable.
                         <br> <br>`;
 
-    const body = document.querySelector('#content');
-    content.appendChild(image);
-    content.appendChild(text);
-    main_page.appendChild(project_MPLI);
-    main_page.appendChild(main_page_text);
-
-    const body = document.querySelector('#content');
-    content.appendChild(main_page);
+    const content = document.querySelector('#content');
+    content.appendChild(project_MPLI);
+    content.appendChild(main_page_text);
 };
 
 // Create project MPLI page
@@ -311,17 +306,7 @@ function submitForm(event)
     fetch(encoded_url);  
 };
 
-create_MPLI_page();
-
-//Menu navigation
-const acceuil = document.querySelector("#acceuil");
-const mpli = document.querySelector("#mpli");
-const equipe = document.querySelector("#equipe");
-const heberger = document.querySelector("#heberger");
-const faq = document.querySelector("#faq");
-const contacts = document.querySelector("#contacts");
-
-heberger.addEventListener('click', create_heberger_page);
+create_main_page();
 
 function create_heberger_page(event) {
     empty_content('content');
@@ -329,7 +314,7 @@ function create_heberger_page(event) {
     const page = document.createElement('div');
     page.innerHTML = `
     <p class="emphasize"> Pour offrir un hébergement, cliquez <a class="link" onclick="create_invite_form()"> ici </a>. </p> <br> <br>
-Pour pallier la saturation actuelle de l’hébergement d’urgence, notre solution est simple :
+<p> Pour pallier la saturation actuelle de l’hébergement d’urgence, notre solution est simple :
 faciliter l’hébergement chez l’habitant des femmes en exclusion.
 A travers Merci pour l’invit’, nous souhaitons permettre à chaqu’un d’entre vous de
 s’engager en prêtant une chambre libre pendant une durée déterminée d’au moins deux
@@ -348,6 +333,22 @@ n’avez pas à contribuer à ses frais de nourriture ou de transport même si v
 évidemment libre de le faire. L’équipe de Merci pour l’invit’ vous accompagne tout au long
 de la cohabitation.
 Pour en savoir plus sur les modalités de l’hébergement, vous pouvez lire la FAQ
-Hébergement.`
+Hébergement. </p>`
     document.querySelector("#content").appendChild(page);
 }
+
+//Menu navigation
+const acceuil = document.querySelector("#acceuil");
+const mpli = document.querySelector("#mpli");
+const equipe = document.querySelector("#equipe");
+const heberger = document.querySelector("#heberger");
+const faq = document.querySelector("#faq");
+const contacts = document.querySelector("#contacts");
+
+
+acceuil.addEventListener('click', create_main_page);
+mpli.addEventListener('click', create_MPLI_page);
+equipe.addEventListener('click', create_team_page);
+faq.addEventListener('click', create_faq_page);
+heberger.addEventListener('click', create_heberger_page);
+contacts.addEventListener('click', create_contacts_page);

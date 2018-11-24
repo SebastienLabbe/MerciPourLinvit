@@ -84,9 +84,9 @@ body {
   justify-content: center;
   text-align: left;
 
-  margin: auto;
-  margin-top: 120px;
-  margin-bottom: 60px;
+  margin: auto !important;
+  margin-top: 120px !important;
+  margin-bottom: 60px !important;
   padding: 40px;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -97,7 +97,7 @@ body {
   background-color: #f0f0f0;
   font-family: 'Note Sans SC', sans-serif;
 
-  border-top: solid rgb(255, 188, 101) 2px;
+  border-top: solid rgb(255, 188, 101) 3px;
 }
 
 form {
