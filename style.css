@@ -92,11 +92,12 @@ select[type=text]:focus{
 select {
   margin-bottom: 20px;
   margin-top: 4px;
-  width: 80%;
-  height: 30px;
+  width: 95%;
+  height: 38px;
   border:1px solid gray;
   border-radius:8px; 
-  padding: 5px;
+  padding: 3px;
+  padding-left: 7px;
 }
 
 
