@@ -75,6 +75,10 @@ input[type=text]:focus{
   outline-style: none;
 }
 
+select:focus{
+  outline-style: none;
+}
+
 form {
   display: block
 }
