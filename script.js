@@ -189,9 +189,29 @@ function create_main_page()
                         vers la réinsertion est la tranquillité permise par un hébergement stable.
                         <br> <br>`;
 
+    main_page.appendChild(image);
+    main_page.appendChild(text);
+
     const body = document.querySelector('#content');
-    content.appendChild(image);
-    content.appendChild(text);
+    content.appendChild(main_page);
+};
+
+// Create project MPLI
+function create_MPLI_page()
+{
+    empty_content('content');
+
+    const main_page = document.createElement('div');
+    main_page.setAttribute('id','MPLI_project_page');
+
+    const image =  document.createElement('image');
+    image.setAttribute("scr","image accueil MPLI.png")
+    image.setAttribute("id","big_logo");
+
+
+
+
+
 };
 
 // Trys to submit form
