@@ -3,7 +3,7 @@ body {
   justify-content: center;
   text-align: center;
   margin: 0px;
-  background-color: rgb(255, 225, 230);
+  background-color: white;
   cursor: default;
 }
 
@@ -97,7 +97,7 @@ body {
   background-color: #f0f0f0;
   font-family: 'Note Sans SC', sans-serif;
 
-  border-top: solid rgb(255, 188, 101) 3px;
+  border-top: solid rgb(255, 188, 101) 4px;
 }
 
 form {
