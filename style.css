@@ -50,15 +50,29 @@ body {
 }
 
 .dropdown {
-  display: box;
-  background-color: gray;
+  display: none;
+  background-color: #e0e0e0;
   position: fixed;
   width: 20%; 
   top: 60px;
+  padding: -5px;
 }
 
 .dropdown div {
-  border: solid black 1px;
+  height: 40px;
+  
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; 
+}
+
+.menu>div:hover .dropdown {
+  display: block !important;
+}
+
+.dropdown div:hover {
+  background-color: gray;
 }
 
 .form_container {
@@ -103,14 +117,11 @@ input[type=text]:focus{
   border: 1px solid red
 }
 
-<<<<<<< HEAD
-=======
 select[type=text]:focus{
   outline-style: none;
   border: 1px solid black;
 }
 
->>>>>>> e72be189282fb1b278ea7e3dabcf5531dad51152
 select {
   margin-bottom: 20px;
   margin-top: 4px;
@@ -134,4 +145,10 @@ select {
   text-justify: inter-word;
   padding-left: 5%;
   padding-right: 5%;
+}
+
+#menu_logo {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
 }
