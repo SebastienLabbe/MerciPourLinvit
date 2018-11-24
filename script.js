@@ -170,12 +170,12 @@ function create_main_page()
     const main_page = document.createElement('div');
     main_page.setAttribute('id','main_page');
     
-    const image =  document.createElement('image');
-    image.setAttribute("scr","image accueil MPLI.png")
-    image.setAttribute("id","big_logo");
+    const project_MPLI =  document.createElement('img');
+    project_MPLI.setAttribute("scr","project_MPLI.png")
+    project_MPLI.setAttribute("id","big_logo");
 
-    const text = document.createElement('p');
-    text.innerHTML =    `<b>Merci pour l'invit'</b> est le premier réseau d'hébergement 
+    const main_page_text = document.createElement('p');
+    main_page_text.innerHTML =    `<b>Merci pour l'invit'</b> est le premier réseau d'hébergement 
                         citoyen permettant la réinsertion de femmes en difficulté.
                         <br> <br>
                         Le sans abrisme féminin est peu connu, pourtant sur les 200 000 
@@ -189,8 +189,8 @@ function create_main_page()
                         vers la réinsertion est la tranquillité permise par un hébergement stable.
                         <br> <br>`;
 
-    main_page.appendChild(image);
-    main_page.appendChild(text);
+    main_page.appendChild(project_MPLI);
+    main_page.appendChild(main_page_text);
 
     const body = document.querySelector('#content');
     content.appendChild(main_page);
@@ -201,17 +201,52 @@ function create_MPLI_page()
 {
     empty_content('content');
 
-    const main_page = document.createElement('div');
-    main_page.setAttribute('id','MPLI_project_page');
+    const MPLI_project_page = document.createElement('div');
+    MPLI_project_page.setAttribute('id','MPLI_project_page');
 
-    const image =  document.createElement('image');
-    image.setAttribute("scr","image accueil MPLI.png")
-    image.setAttribute("id","big_logo");
+    MPLI_project_page.innerHTML = 
+    `
+    <p>
+        <b>Merci pour l'invit'</b> est le premier 
+        réseau d'hébergement citoyen permettant la réinsertion de femmes en difficulté.
+        <br><br>
+        L’hébergeur solidaire s’engage à accueillir sur une période pouvant aller de 2 
+        semaines à 9 mois. Il est accompagné tout au long de sa démarche par Merci pour 
+        l’invit’ (mise en contact, présence lors de la première rencontre, Charte de 
+        cohabitation, formation à l’accueil, médiation...).
+        <br><br>
+        Les femmes en difficulté nous sont adressées par des associations partenaires, 
+        qui garantissent la relation de confiance entre l’hébergé et l’hébergeur et 
+        l’inscription dans un parcours de réinsertion.
+        <br><br>
+        Merci pour l'invit' assure durant la durée de l’hébergement un accompagnement 
+        social permettant d’inscrire l’accueilli dans un parcours de réinsertion.
+        <br><br>
+        L'hébergement solidaire se déroule donc en 6 étapes :
+    </p>
+    <img id="etapes_hebergement" src="etapes_hebergement.png"></img>
+    <p>
+        Pour devenir hébergeur solidaire, il vous suffit de remplir
+        <formulaire class="link" onclick="create_invite_form()"> ce formulaire</formulaire>.
+        <br><br>
+        Merci pour l’invit’ en action :
+        <br><br>
+        A titre d'exemple, une jeune femme est hébergée depuis maintenant 
+        6 mois chez une hébergeuse solidaire. Malgré son emploi en intérim, 
+        elle s’est retrouvée à la rue et a été orientée vers nous par une 
+        association via cette page.
+        <br><br>
+        Aujourd’hui, elle a pu refaire son CV grâce à l’association qui 
+        l’accompagne, elle a obtenu un CDD qui va bientôt devenir un CDI.
+        <br><br>
+        Au-delà de l’hébergement, c’est aussi un lien social durable et 
+        des mises en réseaux qui sont permises par l’hébergement l’habitant.
+    </p>
+    <img id="key_passing" src="key_passing.png"></img>
+    `;
 
-
-
-
-
+    const content = document.querySelector('#content');
+    content.appendChild(MPLI_project_page);
 };
 
 // Trys to submit form
@@ -256,7 +291,7 @@ function submitForm(event)
     fetch(encoded_url);  
 };
 
-create_main_page();
+create_MPLI_page();
 
 //Menu navigation
 const acceuil = document.querySelector("#acceuil");
