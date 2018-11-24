@@ -42,7 +42,7 @@ body {
   transition: background-color 0.5s;
 }
 
-.menu>*:hover {
+.menu>*:hover:not(img) {
   padding: 0px;
   background-color: #c0c0c0;
   border-left: solid black 1px;
@@ -55,7 +55,7 @@ body {
   display: none;
   background-color: #e0e0e0;
   position: fixed;
-  width: 20%; 
+  width: 18%; 
   top: 60px;
   padding: -5px;
   box-shadow: 5px 5px 5px gray;
@@ -84,9 +84,9 @@ body {
   justify-content: center;
   text-align: left;
 
-  margin: auto;
-  margin-top: 120px;
-  margin-bottom: 60px;
+  margin: auto !important;
+  margin-top: 120px !important;
+  margin-bottom: 60px !important;
   padding: 40px;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -97,7 +97,7 @@ body {
   background-color: #f0f0f0;
   font-family: 'Note Sans SC', sans-serif;
 
-  border-top: solid rgb(255, 188, 101) 2px;
+  border-top: solid rgb(255, 188, 101) 3px;
 }
 
 form {
@@ -150,8 +150,32 @@ select {
   padding-right: 5%;
 }
 
+p {
+  font-size: 20px;
+}
+
+#content>div {
+  margin: 50px;
+}
+
+.emphasize {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.link {
+  color: blue;
+  cursor: pointer;
+}
+
 #menu_logo {
-  display: inline-block;
-  height: 40px;
-  width: 40px;
+  display: block;
+  width: 5%;
+  height: auto;
+  padding-left: 5%;
+}
+
+#big_logo {
+  width:100%;
+  height: auto;
 }

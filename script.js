@@ -306,6 +306,43 @@ function submitForm(event)
 
 create_main_page();
 
+function create_heberger_page(event) 
+{
+    empty_content('content');
+
+    const page = document.createElement('div');
+    page.innerHTML = 
+    `
+    <p class="emphasize"> 
+        Pour offrir un hébergement, cliquez <a class="link" onclick="create_invite_form()"> ici </a>. 
+    </p> 
+    <br> <br>
+    <p>
+        Pour pallier la saturation actuelle de l’hébergement d’urgence, notre solution est simple :
+        faciliter l’hébergement chez l’habitant des femmes en exclusion.
+        A travers Merci pour l’invit’, nous souhaitons permettre à chaqu’un d’entre vous de
+        s’engager en prêtant une chambre libre pendant une durée déterminée d’au moins deux
+        semaines afin de faciliter la réinsertion de femmes en difficulté.
+
+        Bien évidemment, rien ne peut se faire sans le tissu associatif local : ainsi, nous
+        travaillons sur prescription des organismes qui orientent des femmes souhaitant se réinsérer
+        vers notre dispositif. Au cours de l’hébergement, la personne hébergée continue d’être suivie
+        par l’association l’ayant orientée.
+        L’hébergeur n’est pas seul dans sa démarche : il est accompagné par un dispositif lui
+        permettant d’être mis en confiance, et éviter les remises à la rue. Ainsi, nous mettons en place
+        des outils accompagnantl’hébergement afin qu’il se passe en toute quiétude, tels qu’une
+        charte signée au début de l’hébergement.
+        L’hébergement se fait à titre gratuit et pour une période de deux semaines minimum. Vous
+        n’avez pas à contribuer à ses frais de nourriture ou de transport même si vous êtes
+        évidemment libre de le faire. L’équipe de Merci pour l’invit’ vous accompagne tout au long
+        de la cohabitation.
+        Pour en savoir plus sur les modalités de l’hébergement, vous pouvez lire la FAQ
+        Hébergement. 
+    </p>
+    `
+    document.querySelector("#content").appendChild(page);
+}
+
 //Menu navigation
 const acceuil = document.querySelector("#acceuil");
 const mpli = document.querySelector("#mpli");
@@ -314,3 +351,10 @@ const heberger = document.querySelector("#heberger");
 const faq = document.querySelector("#faq");
 const contacts = document.querySelector("#contacts");
 
+
+acceuil.addEventListener('click', create_main_page);
+mpli.addEventListener('click', create_MPLI_page);
+equipe.addEventListener('click', create_team_page);
+faq.addEventListener('click', create_faq_page);
+heberger.addEventListener('click', create_heberger_page);
+contacts.addEventListener('click', create_contacts_page);
