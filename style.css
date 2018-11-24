@@ -196,9 +196,10 @@ select {
 
 #menu_logo {
   display: block;
-  width: 5%;
-  height: auto;
-  padding-left: 5%;
+  width:70px;
+  height: 70px;
+  padding: 5px;
+  padding-top: 1px;
 }
 
 /* MPLI */
@@ -226,6 +227,7 @@ button
   padding-bottom: 8px;
   margin-top: 20px;
   box-shadow: 5px 5px 10px grey; 
+  outline-style: none;
 }
 
 button:hover
@@ -278,3 +280,4 @@ button:hover
   transition: height 0.3s;
   
 }
+
