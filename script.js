@@ -1,12 +1,12 @@
 "use strict";
 
 
-// creates the an input given 
-function create_form_text_holder(name, place_holder)
+// Returns as a string the HTML source code for an input bar that holds text for the form (ex : Name )
+function create_form_text_holder(name,place_holder)
 {
     if (typeof place_holder === 'undefined') 
     {
-        place_holder = name.toUpperCase(); 
+        place_holder = name; 
     };
     return `<div class="input_container">
                 <label for="${name.toLowerCase()}"><b>${name} : </b></label>
@@ -16,6 +16,7 @@ function create_form_text_holder(name, place_holder)
             </div>`;
 };
 
+// Returns as a string the HTML source code for the title for the form
 function create_form_title(title)
 {
     return `<div id="form_title">
@@ -23,6 +24,7 @@ function create_form_title(title)
             </div>`;
 };
 
+// Returns as a string the HTML source code for the button for the form
 function create_form_button()
 {
     return `<div id="form_button">
@@ -32,6 +34,7 @@ function create_form_button()
             </div>`;
 };
 
+// Returns as a string the HTML source code for the initial description for the form
 function create_form_description()
 {
     return `<p id="description">
@@ -57,6 +60,7 @@ function create_form_description()
             </p>`;
 };
 
+// Returns as a string the HTML source code for a drop down menu
 function create_form_drop_down(name,elements)
 {
     let drops = [];
@@ -67,13 +71,14 @@ function create_form_drop_down(name,elements)
     return `<div class="input_container">
                 <label for="${name.toLowerCase()}"><b>${name} : </b></label>
                 <br>
-                <select class="data" name="${name.toLowerCase()}">
+                <select type="text" class="data" name="${name.toLowerCase()}">
                 ${drops.join('')}
                 </select>
                 <span class="focus-input" data-placeholder="${name.toUpperCase()}"></span>
             </div>`;
 };
 
+//
 function create_invite_form(form_name)
 {
     const form = document.createElement('form');
@@ -108,6 +113,8 @@ function create_invite_form(form_name)
                     "Qu'attendez-vous de cette expérience d'accueil ?",
                     "Des questions ou commentaires?"];
 
+    let place_holder = ['jj/mm/aaaa','Votre reponse','Votre reponse']
+
     for(let i = 0;i < names.length ; i++)
     {
         if (i == 2) form_inner_html.push(create_form_text_holder(names[i]));
@@ -121,10 +128,15 @@ function create_invite_form(form_name)
 
     form.innerHTML = form_inner_html.join('');
     
-    const form_content = document.querySelector('#form_content');
-
+    const form_container = document.createElement('div');
+    const form_content = document.createElement('div');
+    form_content.setAttribute("class","form_content");
+    form_container.setAttribute("class","form_container")
     form_content.appendChild(form);
-    
+    form_container.appendChild(form_content);
+
+    const body = document.querySelector('body');
+    body.appendChild(form_container);
 };
 
 create_invite_form();
