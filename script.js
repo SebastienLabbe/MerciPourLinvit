@@ -197,7 +197,8 @@ function create_contacts_page()
         </a>
         <br>
         Tel : 06 71 20 82 79 (9h30h - 18h30 en semaine).
-        <br>
+        <br><br>
+        <div class="hr"></div>
         <br>
         Pour vous inscrire en tant qu'hébergeur.se, remplissez le formulaire.
         <br>
@@ -232,43 +233,47 @@ function create_MPLI_page()
 
     MPLI_project_page.innerHTML = 
     `
-    <p>
-        <b>Merci pour l'invit'</b> est le premier 
-        réseau d'hébergement citoyen permettant la réinsertion de femmes en difficulté.
-        <br><br>
-        L’hébergeur solidaire s’engage à accueillir sur une période pouvant aller de 2 
-        semaines à 9 mois. Il est accompagné tout au long de sa démarche par Merci pour 
-        l’invit’ (mise en contact, présence lors de la première rencontre, Charte de 
-        cohabitation, formation à l’accueil, médiation...).
-        <br><br>
-        Les femmes en difficulté nous sont adressées par des associations partenaires, 
-        qui garantissent la relation de confiance entre l’hébergé et l’hébergeur et 
-        l’inscription dans un parcours de réinsertion.
-        <br><br>
-        Merci pour l'invit' assure durant la durée de l’hébergement un accompagnement 
-        social permettant d’inscrire l’accueilli dans un parcours de réinsertion.
-        <br><br>
-    </p>
+    <div class="boxTopRed">
+        <p>
+            <b>Merci pour l'invit'</b> est le premier 
+            réseau d'hébergement citoyen permettant la réinsertion de femmes en difficulté.
+            <br><br>
+            L’hébergeur solidaire s’engage à accueillir sur une période pouvant aller de 2 
+            semaines à 9 mois. Il est accompagné tout au long de sa démarche par Merci pour 
+            l’invit’ (mise en contact, présence lors de la première rencontre, Charte de 
+            cohabitation, formation à l’accueil, médiation...).
+            <br><br>
+            Les femmes en difficulté nous sont adressées par des associations partenaires, 
+            qui garantissent la relation de confiance entre l’hébergé et l’hébergeur et 
+            l’inscription dans un parcours de réinsertion.
+            <br><br>
+            Merci pour l'invit' assure durant la durée de l’hébergement un accompagnement 
+            social permettant d’inscrire l’accueilli dans un parcours de réinsertion.
+            <br><br>
+        </p>
+    </div>
     <span class="emphasize"> L'hébergement solidaire se déroule donc en 6 étapes : </span>
     <img id="etapes_hebergement" src="etapes_hebergement.png"></img>
-    <p>
-        Pour devenir hébergeur solidaire, il vous suffit de remplir
-        <formulaire class="link" onclick="create_invite_form()"> ce formulaire</formulaire>.
-        <br><br>
-        Merci pour l’invit’ en action :
-        <br><br>
-        A titre d'exemple, une jeune femme est hébergée depuis maintenant 
-        6 mois chez une hébergeuse solidaire. Malgré son emploi en intérim, 
-        elle s’est retrouvée à la rue et a été orientée vers nous par une 
-        association via cette page.
-        <img id="key_passing" src="key_passing.png"></img>
-        <br><br>
-        Aujourd’hui, elle a pu refaire son CV grâce à l’association qui 
-        l’accompagne, elle a obtenu un CDD qui va bientôt devenir un CDI.
-        <br><br>
-        Au-delà de l’hébergement, c’est aussi un lien social durable et 
-        des mises en réseaux qui sont permises par l’hébergement l’habitant.
-    </p>
+    <div class="boxTopRed">
+        <p>
+            <img id="key_passing" src="key_passing.png" align="right"></img>
+            Pour devenir hébergeur solidaire, il vous suffit de remplir
+            <formulaire class="link" onclick="create_invite_form()"> ce formulaire</formulaire>.
+            <br><br>
+            Merci pour l’invit’ en action :
+            <br><br>
+            A titre d'exemple, une jeune femme est hébergée depuis maintenant 
+            6 mois chez une hébergeuse solidaire. Malgré son emploi en intérim, 
+            elle s’est retrouvée à la rue et a été orientée vers nous par une 
+            association via cette page.
+            <br><br>
+            Aujourd’hui, elle a pu refaire son CV grâce à l’association qui 
+            l’accompagne, elle a obtenu un CDD qui va bientôt devenir un CDI.
+            <br><br>
+            Au-delà de l’hébergement, c’est aussi un lien social durable et 
+            des mises en réseaux qui sont permises par l’hébergement l’habitant.
+        </p>
+    </div>
     `;
 
     const content = document.querySelector('#content');

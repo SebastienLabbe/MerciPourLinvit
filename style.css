@@ -9,7 +9,7 @@ body {
   font-family: "Calibri";
 }
 
-p, .boxTopRed {
+p , .boxTopRed {
   font-size: 20px;
   text-align: justify;
   margin-left: 15%;
@@ -276,4 +276,9 @@ button:hover
   height: 250px;
   transition: height 0.3s;
   
+}
+
+.hr{
+  border-bottom: solid grey 1px;
+  width: 100%;
 }
