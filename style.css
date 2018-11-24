@@ -9,17 +9,7 @@ body {
   font-family: "Calibri"
 }
 
-<<<<<<< HEAD
-#envoyer{
-  border-radius: 5px;
-  font-weight: bold;
-  padding: 5px;  
-}
-
-p, boxTopRed {
-=======
-p {
->>>>>>> 852079855404482487aa4e2388f310989a688ada
+p, .boxTopRed {
   font-size: 20px;
   text-align: justify;
   margin-left: 15%;
@@ -264,7 +254,8 @@ button:hover
   width: 100vw;
   display: inline-block;
   justify-content: center;
-  vertical-align: middle;}
+  vertical-align: middle !important;
+}
 
 .name {
   font-size: 36px;
