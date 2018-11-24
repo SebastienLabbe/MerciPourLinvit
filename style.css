@@ -9,12 +9,6 @@ body {
   font-family: "Calibri"
 }
 
-#envoyer{
-  border-radius: 5px;
-  font-weight: bold;
-  padding: 5px;  
-}
-
 p {
   font-size: 20px;
   text-align: justify;
@@ -238,6 +232,8 @@ button:hover
 {
   background-color: #ff4475;
   box-shadow: 7px 7px 15px grey; 
+}
+
 /* Team page */
 #team_page {
   margin: 0px !important;

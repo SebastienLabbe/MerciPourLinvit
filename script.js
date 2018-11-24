@@ -23,24 +23,12 @@ function create_form_text_holder(name,place_holder)
     {
         place_holder = name; 
     };
-
     
-
     return `<div class="input_container">
                 <label for="${name.toLowerCase()}"><b> ${shown_name} : </b></label>
                 <br>
                 <input id="input_${name.toLowerCase()}" class="data" type="text" name="${name.toLowerCase()}" placeholder="${place_holder}">
                 <span class="focus-input" data-placeholder="${name.toUpperCase()}"></span>
-            </div>`;
-};
-
-// Returns as a string the HTML source code for the button for the form
-function create_form_button()
-{
-    return `<div id="form_button">
-                <button id="envoyer" type="button">
-                    Envoyer
-                </button>
             </div>`;
 };
 
@@ -126,19 +114,20 @@ function create_invite_form()
 
     for(let i = 0;i < names.length ; i++)
     {
-        form_inner_html += create_form_text_holder(names[i]);
+        form_inner_html += create_form_text_holder(names[i],place_holder[i]);
     };
 
-    form_inner_html += create_form_button();
+    form_inner_html += `<div id="form_button">
+                            <button id="envoyer" type="button">
+                                Envoyer
+                            </button>
+                        </div>`;
     
     form.innerHTML = form_inner_html;
     
     const form_container = document.createElement('div');
-    const form_content = document.createElement('div');
-    form_content.setAttribute("class","form_content");
     form_container.setAttribute("class","form_container")
-    form_content.appendChild(form);
-    form_container.appendChild(form_content);
+    form_container.appendChild(form);
 
     const content = document.querySelector('#content');
     content.appendChild(form_container);
