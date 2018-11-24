@@ -71,6 +71,20 @@ input {
   padding: 5px; 
 }
 
+input[type=text]:focus{
+  outline-style: none;
+}
+
 form {
   display: block
+}
+
+select {
+  margin-bottom: 20px;
+  margin-top: 4px;
+  width: 80%;
+  height: 30px;
+  border:1px solid gray;
+  border-radius:8px; 
+  padding: 5px; 
 }
