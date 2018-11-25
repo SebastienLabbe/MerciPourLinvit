@@ -77,12 +77,12 @@ function create_form_page()
     </div>
     <p1 id="description">
         Vous avez une chambre libre ? Vous souhaitez devenir hébergeur solidaire et faire 
-        parti de l'aventure Merci pour l'invit' ? 
+        parti de l'aventure <i> Merci pour l'invit' </i> ? 
         <br> <br>
-        Merci pour l'invit' est un projet qui prône l'hébergement solidaire afin de faciliter la 
+        <i> Merci pour l'invit' </i> est un projet qui prône l'hébergement solidaire afin de faciliter la 
         réinsertion socioprofessionnelle de femmes et de jeunes en grande précarité. 
         <br> <br>
-        Merci pour l'invit' se développe actuellement à BORDEAUX, à PARIS et sa banlieue. 
+        <i> Merci pour l'invit' </i> se développe actuellement à BORDEAUX, à PARIS et sa banlieue. 
         <br> <br>
         Après avoir rempli ce questionnaire, la responsable "hébergement"vous contactera pour 
         vous expliquer plus amplement la démarche. La Charte de cohabitation sera signée entre 
@@ -279,19 +279,19 @@ function create_MPLI_page()
     MPLI_project_page.innerHTML = create_page_title("MPLI aujourd'hui") +
     `
     <div class="boxTopRed">
-            <b>Merci pour l'invit'</b> est le premier 
+            <i>Merci pour l'invit'</i> est le premier 
             réseau d'hébergement citoyen permettant la réinsertion de femmes en difficulté.
             <br><br>
             L’hébergeur solidaire s’engage à accueillir sur une période pouvant aller de 2 
-            semaines à 9 mois. Il est accompagné tout au long de sa démarche par Merci pour 
-            l’invit’ (mise en contact, présence lors de la première rencontre, Charte de 
+            semaines à 9 mois. Il est accompagné tout au long de sa démarche par <i>Merci pour 
+            l’invit’ </i> (mise en contact, présence lors de la première rencontre, Charte de 
             cohabitation, formation à l’accueil, médiation...).
             <br><br>
             Les femmes en difficulté nous sont adressées par des associations partenaires, 
             qui garantissent la relation de confiance entre l’hébergé et l’hébergeur et 
             l’inscription dans un parcours de réinsertion.
             <br><br>
-            Merci pour l'invit' assure durant la durée de l’hébergement un accompagnement 
+            <i> Merci pour l'invit' </i> assure durant la durée de l’hébergement un accompagnement 
             social permettant d’inscrire l’accueilli dans un parcours de réinsertion.
             <br><br>
     </div>
