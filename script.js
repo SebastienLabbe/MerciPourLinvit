@@ -377,9 +377,9 @@ function submitForm(event)
         "Nombres d'habitants",
         "Modalites d'hebergement",
         "Duree d'hebergement",
-        "Q1",
-        "Q2",
-        "Q3"
+        "Date",
+        "Attente",
+        "Questions"
     ]
     let data = [];
     const data_containers = document.querySelectorAll('.input_container');
@@ -400,8 +400,7 @@ function submitForm(event)
         parameters.push(data_name[i] + '=' + data[i]) 
     }
 
-    let encoded_url = encodeURI(`https://script.google.com/macros/s/AKfycbzTM2nRD
-                                Bcn4vDs2dTAJTnm7diQakYLrwTDxEGazT0oFMbowL7z/exec?${parameters.join('&')}`);
+    let encoded_url = encodeURI(`https://script.google.com/macros/s/AKfycbzTM2nRDBcn4vDs2dTAJTnm7diQakYLrwTDxEGazT0oFMbowL7z/exec?${parameters.join('&')}`);
     fetch(encoded_url);
     location.reload();
     alert('Merci a vous. Vos coordonées ont bien étés enregistrées.');

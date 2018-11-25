@@ -8,6 +8,7 @@ body {
   background-color: whitesmoke;
   cursor: default;
   font-family: "Calibri";
+  margin-bottom: 50px;
 }
 
 #background_image_left {
@@ -30,8 +31,8 @@ p, .boxTopRed {
   text-align: justify;
   margin-left: 15%;
   margin-right: 15%;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 40px;
   padding: 25px;
   padding-top: 20px;
   border-radius: 8px;
@@ -136,6 +137,7 @@ p, .boxTopRed {
 #project_MPLI {
   width:100%;
   height: auto;
+  margin-bottom: 15px; 
 }
 
 /* Form page */
@@ -178,7 +180,7 @@ input {
 
 input[type=text]:focus{
   outline-style: none;
-  border: 1px solid red;
+  border: 1px solid rgb(34, 143, 34);
 }
 
 select[type=text]:focus{
@@ -221,7 +223,6 @@ select {
   margin-right: 15px;
   margin-left: 15px;
   padding-top: 3px;
-  padding-bottom:
 }
 
 /* MPLI */
@@ -252,6 +253,7 @@ button
   margin-top: 20px;
   box-shadow: 5px 5px 10px grey; 
   outline-style: none;
+  font-weight: bold;
 }
 
 button:hover
@@ -274,6 +276,7 @@ button:hover
   display: inline-block;
   justify-content: center;
   vertical-align: middle;
+
 }
 
 #team_members:hover {
