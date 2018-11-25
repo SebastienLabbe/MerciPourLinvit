@@ -199,7 +199,7 @@ function create_contacts_page()
         <br><br>
         <div class="hr"></div>
         <br>
-        Pour vous inscrire en tant qu'hébergeur.se, remplissez le formulaire.
+        Pour vous inscrire en tant qu'hébergeur.se, remplissez le formulaire : 
         <br>
         <button onclick="create_form_page()">
             Offrir un hébergement
