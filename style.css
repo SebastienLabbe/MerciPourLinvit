@@ -316,3 +316,9 @@ button:hover
 .page_title{
   font-size: 45px;
 }
+
+/* scroll bar */
+
+::-webkit-scrollbar {
+  width: 0px;
+}
