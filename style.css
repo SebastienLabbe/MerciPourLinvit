@@ -3,6 +3,7 @@
 General Styling
 ===================================================
 */
+
 body {
   padding-top: 60px;
   padding-bottom: 20px;
@@ -98,6 +99,7 @@ button:hover
 Menu Navigator
 ===================================================
 */
+
 .menu {
   position: fixed;
   top: 0px;
@@ -178,6 +180,7 @@ Menu Navigator
 Main Page
 ===================================================
 */
+
 #project_MPLI {
   width:100%;
   height: auto;
@@ -189,6 +192,7 @@ Main Page
 Form Page
 ===================================================
 */
+
 #form_title{
   font-size: 32px;
   font-weight: bold;
@@ -275,6 +279,7 @@ select {
 MPLI
 ===================================================
 */
+
 #etapes_hebergement {
   width: 90%;
   margin-top: 30px;
@@ -295,6 +300,7 @@ MPLI
 Team Page
 ===================================================
 */
+
 #team_page {
   margin: 0px !important;
   height: 80vh;
@@ -346,6 +352,7 @@ Team Page
 Hide Scrollbar
 ===================================================
 */
+
 ::-webkit-scrollbar {
   width: 0px;
 }
