@@ -4,7 +4,17 @@
 function empty_content(div_id)
 {
     document.querySelector('#'+div_id).innerHTML = '';
-};
+}
+
+// Creates the title for each page
+function create_page_title(title)
+{
+    return `
+            <h1 class="page_title">
+                ${title}
+            <h1>
+            `;
+}
 
 // Returns as a string the HTML source code for an input bar that holds text for the form (ex : Name )
 function create_form_text_holder(name,place_holder)
@@ -57,7 +67,7 @@ function create_form_page()
 
     const form = document.createElement('form');
 
-    let form_inner_html = '';
+    let form_inner_html = create_page_title("Formulaire d'héberement");
 
     form_inner_html += 
     `
@@ -141,7 +151,7 @@ function create_main_page()
     empty_content('content');
 
     const content = document.querySelector('#content');
-    content.innerHTML =    
+    content.innerHTML =  
     `
     <img id="project_MPLI" src="project_MPLI.png"></img>
     <p>
@@ -166,6 +176,42 @@ function create_main_page()
 function create_faq_page()
 {
     empty_content('content');
+
+    const FAQ_page = document.createElement('div');
+    FAQ_page.setAttribute("class","FAQ_page");
+
+    let box_inner_html = create_page_title("FAQ hébergement");
+
+    // Temporary FAQ as no pdf was provided
+    let questions = ["Question 1","Question 2","Question 3","Question 4"];
+    let answers = ["##################<br>##################<br>#### Réponse 1 ####<br>##################<br>##################<br>",
+    "##################<br>##################<br>#### Réponse 2 ####<br>##################<br>##################<br>",
+    "##################<br>##################<br>#### Réponse 3 ####<br>##################<br>##################<br>",
+    "##################<br>##################<br>#### Réponse 4 ####<br>##################<br>##################<br>"];
+    for(let i = 0; i < questions.length;i++)
+    {
+        box_inner_html += 
+        `
+        <div class="boxTopRed">
+            <div class="Question">
+                ${questions[i]}
+            </div>
+            <br>
+            <div class="hr"></div>
+            <br>
+            <div class="Answer">
+                ${answers[i]}
+            </div>
+        </div>
+        `;
+    }
+
+    FAQ_page.innerHTML = box_inner_html;
+
+    const content = document.querySelector('#content');
+    content.appendChild(FAQ_page);
+
+    
 }
 
 // Create contacts page
@@ -176,7 +222,7 @@ function create_contacts_page()
     const contacts_page = document.createElement('div');
     contacts_page.setAttribute('id','contacts_page');
 
-    contacts_page.innerHTML = 
+    contacts_page.innerHTML = create_page_title("Contact") +
     `
     <div class="boxTopRed">
         <b>
@@ -230,7 +276,7 @@ function create_MPLI_page()
     const MPLI_project_page = document.createElement('div');
     MPLI_project_page.setAttribute('id','MPLI_project_page');
 
-    MPLI_project_page.innerHTML = 
+    MPLI_project_page.innerHTML = create_page_title("MPLI aujourd'hui") +
     `
     <div class="boxTopRed">
             <b>Merci pour l'invit'</b> est le premier 
@@ -284,6 +330,8 @@ function create_team_page()
 
     const team_page = document.createElement('div');
     team_page.setAttribute('id','team_page');
+
+    team_page.innerHTML += create_page_title("L'équipe");
 
     const team_members = document.createElement('div');
     team_members.setAttribute('id','team_members');
@@ -364,7 +412,7 @@ function create_heberger_page(event)
     empty_content('content');
 
     const page = document.createElement('div');
-    page.innerHTML = 
+    page.innerHTML = create_page_title("Devenir Hébergeur") +
     `
     <span class="emphasize"> 
         Pour offrir un hébergement, cliquez ci-dessous: <br>
