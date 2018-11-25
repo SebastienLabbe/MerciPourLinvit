@@ -136,6 +136,7 @@ p, .boxTopRed {
 #project_MPLI {
   width:100%;
   height: auto;
+  margin-bottom: 15px; 
 }
 
 /* Form page */
@@ -178,7 +179,7 @@ input {
 
 input[type=text]:focus{
   outline-style: none;
-  border: 1px solid red;
+  border: 1px solid rgb(34, 143, 34);
 }
 
 select[type=text]:focus{
@@ -274,6 +275,7 @@ button:hover
   display: inline-block;
   justify-content: center;
   vertical-align: middle;
+
 }
 
 #team_members:hover {
