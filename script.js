@@ -116,19 +116,19 @@ function create_MPLI_page()
     MPLI_project_page.innerHTML = create_page_title("MPLI aujourd'hui") +
     `
     <div class="boxTopRed">
-            <b>Merci pour l'invit'</b> est le premier 
+            <i>Merci pour l'invit'</i> est le premier 
             réseau d'hébergement citoyen permettant la réinsertion de femmes en difficulté.
             <br><br>
             L’hébergeur solidaire s’engage à accueillir sur une période pouvant aller de 2 
-            semaines à 9 mois. Il est accompagné tout au long de sa démarche par Merci pour 
-            l’invit’ (mise en contact, présence lors de la première rencontre, Charte de 
+            semaines à 9 mois. Il est accompagné tout au long de sa démarche par <i>Merci pour l'invit'</i> 
+            (mise en contact, présence lors de la première rencontre, Charte de 
             cohabitation, formation à l’accueil, médiation...).
             <br><br>
             Les femmes en difficulté nous sont adressées par des associations partenaires, 
             qui garantissent la relation de confiance entre l’hébergé et l’hébergeur et 
             l’inscription dans un parcours de réinsertion.
             <br><br>
-            Merci pour l'invit' assure durant la durée de l’hébergement un accompagnement 
+            <i>Merci pour l'invit'</i> assure durant la durée de l’hébergement un accompagnement 
             social permettant d’inscrire l’accueilli dans un parcours de réinsertion.
             <br><br>
     </div>
@@ -141,7 +141,7 @@ function create_MPLI_page()
             <br>
             <button onclick="create_form_page()"> Offrir un hebergement </button>
             <br> <br>
-            Merci pour l’invit’ en action :
+            <i> Merci pour l’invit’ </i> en action :
             <br><br>
             A titre d'exemple, une jeune femme est hébergée depuis maintenant 
             6 mois chez une hébergeuse solidaire. Malgré son emploi en intérim, 
@@ -178,7 +178,7 @@ function create_team_page()
                 "https://www.linkedin.com/in/yassiner/",
                 "https://www.linkedin.com/in/margaux-tarrerias-b20129134/"];
     let roles = ["Directrice de l'association Solinum","Développeur web",
-                "Chef de projet Merci pour l’invit’"];
+                "Chef de projet <i>Merci pour l'invit'</i>"];
     let image_links = ["victoria_mandefield","yassine_riffi","margaux_tarrerias"];
     for(let i = 0; i<3;i++)
     {
@@ -256,7 +256,7 @@ function create_form_page()
     form_inner_html += 
     `
     <div id="form_title">
-        Devenez hébergeur pour Merci pour l'invit'
+        Devenez hébergeur pour <i>Merci pour l'invit'</i>'
     </div>
     <p1 id="description">
         Vous avez une chambre libre ? Vous souhaitez devenir hébergeur solidaire et faire 
@@ -384,7 +384,7 @@ function create_contacts_page()
     `
     <div class="boxTopRed">
         <b>
-            Contact Merci pour l’invit’
+            Contact <i>Merci pour l'invit'</i>’
         </b>
         <br>
         Email : 
