@@ -13,6 +13,7 @@ function create_page_title(title)
             <h1 class="page_title">
                 ${title}
             <h1>
+            <hr>
             `;
 }
 
