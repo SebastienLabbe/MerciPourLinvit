@@ -210,7 +210,7 @@ function create_heberger_page()
     `
     <span class="emphasize"> 
         Pour offrir un hébergement, cliquez ci-dessous: <br>
-        <button onclick="create_form_page()"> Offrir un hebergement </button> 
+        <button onclick="create_form_page()"> Offrir un hébergement </button> 
     </span> 
     <br> <br>
     <p>
