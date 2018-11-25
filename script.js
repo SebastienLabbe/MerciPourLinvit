@@ -10,6 +10,7 @@ Functions to facilitate form page creation
 function empty_content(div_id) 
 {
     document.querySelector('#'+div_id).innerHTML = '';
+    scroll(0,0);
 }
 
 // Creates the title for each page
