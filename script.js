@@ -12,7 +12,7 @@ function create_page_title(title)
     return `
             <h1 class="page_title">
                 ${title}
-            <h1>
+            </h1>
             <hr>
             `;
 }
@@ -68,7 +68,7 @@ function create_form_page()
 
     const form = document.createElement('form');
 
-    let form_inner_html = create_page_title("Formulaire d'héberement");
+    let form_inner_html = '';
 
     form_inner_html += 
     `
@@ -140,6 +140,7 @@ function create_form_page()
     form_container.appendChild(form);
 
     const content = document.querySelector('#content');
+    content.innerHTML +=  create_page_title("Formulaire d'héberement");
     content.appendChild(form_container);
 
     const submit = document.querySelector("#envoyer");
@@ -407,6 +408,7 @@ function submitForm(event)
     alert('Merci a vous. Vos coordonées ont bien étés enregistrées.');
 };
 
+// Create page herbergeur
 function create_heberger_page(event) 
 {
     empty_content('content');
