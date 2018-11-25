@@ -196,7 +196,7 @@ function create_team_page()
 };
 
 // Create page herbergeur
-function create_heberger_page(event) 
+function create_heberger_page() 
 {
     empty_content('content');
 
