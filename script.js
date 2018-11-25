@@ -387,7 +387,7 @@ function create_contacts_page()
         <b>
             Contact <i>Merci pour l'invit'</i>
         </b>
-        <br>
+        <br><br>
         Email : 
         <a href="mailto:margaux@solinum.org">
             margaux@solinum.org
