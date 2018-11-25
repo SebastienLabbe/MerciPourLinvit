@@ -147,7 +147,7 @@ Menu Navigator
   display: none;
   background-color: #422e51;
   position: fixed;
-  width: 18%; 
+  width: calc((100vw - 132px)/5); 
   top: 60px;
   padding: -5px;
   box-shadow: 5px 5px 5px gray;
