@@ -3,7 +3,6 @@
 // Emptys the content of an div given the id of the div
 function empty_content(div_id)
 {
-    console.log('entered');
     document.querySelector('#'+div_id).innerHTML = '';
 };
 
@@ -257,7 +256,7 @@ function create_MPLI_page()
             Pour devenir hébergeur solidaire, il vous suffit de remplir de clicker sur le 
             button ci-dessous:
             <br>
-            <button> Offrir un hebergement </button>
+            <button onclick="create_form_page()"> Offrir un hebergement </button>
             <br> <br>
             Merci pour l’invit’ en action :
             <br><br>
@@ -360,8 +359,6 @@ function submitForm(event)
     alert('Merci a vous. Vos coordonées ont bien étés enregistrées.');
 };
 
-create_contacts_page();
-
 function create_heberger_page(event) 
 {
     empty_content('content');
@@ -398,7 +395,9 @@ function create_heberger_page(event)
         évidemment libre de le faire. L’équipe de Merci pour l’invit’ vous accompagne tout au long
         de la cohabitation.
         Pour en savoir plus sur les modalités de l’hébergement, vous pouvez lire la FAQ
-        Hébergement. 
+        Hébergement:
+        <br>
+        <button onclick="create_faq_page()"> Accéder a la FAQ </button>
     </p>
     `
     document.querySelector("#content").appendChild(page);
