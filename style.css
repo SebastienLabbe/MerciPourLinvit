@@ -1,4 +1,8 @@
-/*general*/
+/*
+===================================================
+General Styling
+===================================================
+*/
 body {
   padding-top: 60px;
   padding-bottom: 20px;
@@ -56,7 +60,44 @@ p, .boxTopRed {
   cursor: pointer;
 }
 
-/*Header Navigation*/
+button
+{
+  font-size: 16px;
+  border:1px solid #FF3465;
+  border-radius: 20px; 
+  background-color: #FF3465;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 20px;
+  box-shadow: 5px 5px 10px grey; 
+  outline-style: none;
+  font-weight: bold;
+}
+
+button:hover
+{
+  background-color: #ff4475;
+  box-shadow: 7px 7px 15px grey; 
+}
+
+.hr{
+  border-bottom: solid grey 1px;
+  width: 100%;
+}
+
+.page_title{
+  font-size: 45px;
+}
+
+
+/*
+===================================================
+Menu Navigator
+===================================================
+*/
 .menu {
   position: fixed;
   top: 0px;
@@ -132,14 +173,30 @@ p, .boxTopRed {
   transition: background-color 0.5s;
 }
 
-/* Main page */
+
+/*
+===================================================
+Main Page
+===================================================
+*/
 #project_MPLI {
   width:100%;
   height: auto;
   margin-bottom: 15px; 
 }
 
-/* Form page */
+/*
+===================================================
+Form Page
+===================================================
+*/
+#form_title{
+  font-size: 32px;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center !important;
+  margin-bottom: 30px;
+}
 
 .form_container {
   display:flex;
@@ -224,7 +281,12 @@ select {
   padding-top: 3px;
 }
 
-/* MPLI */
+
+/*
+===================================================
+MPLI
+===================================================
+*/
 #etapes_hebergement {
   width: 90%;
   margin-top: 30px;
@@ -239,30 +301,12 @@ select {
   box-shadow: 0px 0px 5px gray;
 }
 
-button
-{
-  font-size: 16px;
-  border:1px solid #FF3465;
-  border-radius: 20px; 
-  background-color: #FF3465;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  margin-top: 20px;
-  box-shadow: 5px 5px 10px grey; 
-  outline-style: none;
-  font-weight: bold;
-}
 
-button:hover
-{
-  background-color: #ff4475;
-  box-shadow: 7px 7px 15px grey; 
-}
-
-/* Team page */
+/*
+===================================================
+Team Page
+===================================================
+*/
 #team_page {
   margin: 0px !important;
   height: 80vh;
@@ -308,17 +352,12 @@ button:hover
   
 }
 
-.hr{
-  border-bottom: solid grey 1px;
-  width: 100%;
-}
 
-.page_title{
-  font-size: 45px;
-}
-
-/* scroll bar */
-
+/*
+===================================================
+Hide Scrollbar
+===================================================
+*/
 ::-webkit-scrollbar {
   width: 0px;
 }
