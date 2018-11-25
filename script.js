@@ -380,19 +380,19 @@ function create_heberger_page(event)
         s’engager en prêtant une chambre libre pendant une durée déterminée d’au moins deux
         semaines afin de faciliter la réinsertion de femmes en difficulté.
         <br><br>
-        Bien évidemment, rien ne peut se faire sans le tissu associatif local : ainsi, nous
+        Bien évidemment, rien ne peut se faire sans le <b>tissu associatif local</b> : ainsi, nous
         travaillons sur prescription des organismes qui orientent des femmes souhaitant se réinsérer
         vers notre dispositif. Au cours de l’hébergement, la personne hébergée continue d’être suivie
         par l’association l’ayant orientée.
         <br><br>
-        L’hébergeur n’est pas seul dans sa démarche : il est accompagné par un dispositif lui
+        <b>L’hébergeur n’est pas seul dans sa démarche</b> : il est accompagné par un dispositif lui
         permettant d’être mis en confiance, et éviter les remises à la rue. Ainsi, nous mettons en place
-        des outils accompagnantl’hébergement afin qu’il se passe en toute quiétude, tels qu’une
+        des outils accompagnant l’hébergement afin qu’il se passe en toute <b>quiétude</b>, tels qu’une
         charte signée au début de l’hébergement.
         <br><br>
         L’hébergement se fait à titre gratuit et pour une période de deux semaines minimum. Vous
         n’avez pas à contribuer à ses frais de nourriture ou de transport même si vous êtes
-        évidemment libre de le faire. L’équipe de Merci pour l’invit’ vous accompagne tout au long
+        évidemment libre de le faire. L’équipe de <i>Merci pour l’invit’</i> vous accompagne tout au long
         de la cohabitation.
         Pour en savoir plus sur les modalités de l’hébergement, vous pouvez lire la FAQ
         Hébergement:
