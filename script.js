@@ -3,7 +3,6 @@
 // Emptys the content of an div given the id of the div
 function empty_content(div_id)
 {
-    console.log('entered');
     document.querySelector('#'+div_id).innerHTML = '';
 };
 
@@ -52,7 +51,7 @@ function create_form_drop_down(name,elements)
 };
 
 // Creates the entire form and adds it to the body
-function create_invite_form()
+function create_form_page()
 {
     empty_content('content');
 
@@ -146,18 +145,18 @@ function create_main_page()
     `
     <img id="project_MPLI" src="project_MPLI.png"></img>
     <p>
-        <b>Merci pour l'invit'</b> est le premier réseau d'hébergement 
+        <i>Merci pour l'invit'</i> est le <b>premier réseau d'hébergement</b> 
         citoyen permettant la réinsertion de femmes en difficulté.
         <br> <br>
-        Le sans abrisme féminin est peu connu, pourtant sur les 200 000 
-        personnes sans domicile fixe en France (Estimation de la FNARS en 2017), 
-        40% sont des femmes.
+        Le sans abrisme féminin est peu connu, pourtant sur les <b>200 000 
+        personnes</b> sans domicile fixe en France (Estimation de la FNARS en 2017), 
+        <b>40% sont des femmes.</b>
         <br> <br>
         Pour venir en aide à ces femmes et pallier la saturation actuelle de 
-        l’hébergement d’urgence, notre solution est simple : héberger chez l’habitant.
+        l’hébergement d’urgence, notre solution est simple : <b>héberger chez l’habitant.</b>
         <br> <br>
         De nombreuses études sur le « housing first » l’ont prouvé, la condition n°1 
-        vers la réinsertion est la tranquillité permise par un hébergement stable.
+        vers la réinsertion est la <b>tranquillité</b> permise par un <b>hébergement stable.</b>
         <br> <br>
     </p>
     `;
@@ -202,7 +201,7 @@ function create_contacts_page()
         <br>
         Pour vous inscrire en tant qu'hébergeur.se, remplissez le formulaire.
         <br>
-        <button onclick="create_invite_form()">
+        <button onclick="create_form_page()">
             Offrir un hébergement
         </button>
         <br><br>
@@ -254,9 +253,11 @@ function create_MPLI_page()
     <img id="etapes_hebergement" src="etapes_hebergement.png"></img>
     <div class="boxTopRed">
             <img id="key_passing" src="key_passing.png" align="right"></img>
-            Pour devenir hébergeur solidaire, il vous suffit de remplir
-            <formulaire class="link" onclick="create_invite_form()"> ce formulaire</formulaire>.
-            <br><br>
+            Pour devenir hébergeur solidaire, il vous suffit de remplir de clicker sur le 
+            button ci-dessous:
+            <br>
+            <button onclick="create_form_page()"> Offrir un hebergement </button>
+            <br> <br>
             Merci pour l’invit’ en action :
             <br><br>
             A titre d'exemple, une jeune femme est hébergée depuis maintenant 
@@ -351,11 +352,12 @@ function submitForm(event)
         parameters.push(data_name[i] + '=' + data[i]) 
     }
 
-    let encoded_url = encodeURI(`https://script.google.com/macros/s/AKfycbzTM2nRDBcn4vDs2dTAJTnm7diQakYLrwTDxEGazT0oFMbowL7z/exec?${parameters.join('&')}`);
-    fetch(encoded_url);  
+    let encoded_url = encodeURI(`https://script.google.com/macros/s/AKfycbzTM2nRD
+                                Bcn4vDs2dTAJTnm7diQakYLrwTDxEGazT0oFMbowL7z/exec?${parameters.join('&')}`);
+    fetch(encoded_url);
+    location.reload();
+    alert('Merci a vous. Vos coordonées ont bien étés enregistrées.');
 };
-
-create_contacts_page();
 
 function create_heberger_page(event) 
 {
@@ -366,30 +368,36 @@ function create_heberger_page(event)
     `
     <span class="emphasize"> 
         Pour offrir un hébergement, cliquez ci-dessous: <br>
-        <button onclick="create_invite_form()"> Offrir un hebergement </button> 
+        <button onclick="create_form_page()"> Offrir un hebergement </button> 
     </span> 
     <br> <br>
     <p>
         Pour pallier la saturation actuelle de l’hébergement d’urgence, notre solution est simple :
-        faciliter l’hébergement chez l’habitant des femmes en exclusion.
-        A travers Merci pour l’invit’, nous souhaitons permettre à chaqu’un d’entre vous de
+        <br>
+        <b>faciliter l’hébergement chez l’habitant des femmes en exclusion.</b>
+        <br><br>
+        A travers <i>Merci pour l’invit’</i>, nous souhaitons permettre à chaqu’un d’entre vous de
         s’engager en prêtant une chambre libre pendant une durée déterminée d’au moins deux
         semaines afin de faciliter la réinsertion de femmes en difficulté.
-
-        Bien évidemment, rien ne peut se faire sans le tissu associatif local : ainsi, nous
+        <br><br>
+        Bien évidemment, rien ne peut se faire sans le <b>tissu associatif local</b> : ainsi, nous
         travaillons sur prescription des organismes qui orientent des femmes souhaitant se réinsérer
         vers notre dispositif. Au cours de l’hébergement, la personne hébergée continue d’être suivie
         par l’association l’ayant orientée.
-        L’hébergeur n’est pas seul dans sa démarche : il est accompagné par un dispositif lui
+        <br><br>
+        <b>L’hébergeur n’est pas seul dans sa démarche</b> : il est accompagné par un dispositif lui
         permettant d’être mis en confiance, et éviter les remises à la rue. Ainsi, nous mettons en place
-        des outils accompagnantl’hébergement afin qu’il se passe en toute quiétude, tels qu’une
+        des outils accompagnant l’hébergement afin qu’il se passe en toute <b>quiétude</b>, tels qu’une
         charte signée au début de l’hébergement.
+        <br><br>
         L’hébergement se fait à titre gratuit et pour une période de deux semaines minimum. Vous
         n’avez pas à contribuer à ses frais de nourriture ou de transport même si vous êtes
-        évidemment libre de le faire. L’équipe de Merci pour l’invit’ vous accompagne tout au long
+        évidemment libre de le faire. L’équipe de <i>Merci pour l’invit’</i> vous accompagne tout au long
         de la cohabitation.
         Pour en savoir plus sur les modalités de l’hébergement, vous pouvez lire la FAQ
-        Hébergement. 
+        Hébergement:
+        <br>
+        <button onclick="create_faq_page()"> Accéder a la FAQ </button>
     </p>
     `
     document.querySelector("#content").appendChild(page);
@@ -406,7 +414,7 @@ const contacts = document.querySelector("#contacts");
 acceuil.addEventListener('click', create_main_page);
 mpli.addEventListener('click', create_MPLI_page);
 equipe.addEventListener('click', create_team_page);
-//faq.addEventListener('click', create_faq_page);
+faq.addEventListener('click', create_faq_page);
 heberger.addEventListener('click', create_heberger_page);
 contacts.addEventListener('click', create_contacts_page);
 
