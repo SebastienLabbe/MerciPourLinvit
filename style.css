@@ -312,3 +312,7 @@ button:hover
   border-bottom: solid grey 1px;
   width: 100%;
 }
+
+.page_title{
+  font-size: 45px;
+}
