@@ -7,7 +7,7 @@ Functions to facilitate form page creation
 */
 
 // Emptys the content of an div given the id of the div
-function empty_content(div_id)
+function empty_content(div_id) 
 {
     document.querySelector('#'+div_id).innerHTML = '';
 }
@@ -26,19 +26,22 @@ function create_page_title(title)
 // Returns as a string the HTML source code for an input bar that holds text for the form (ex : Name )
 function create_form_text_holder(name,place_holder)
 {
-    let shown_name;
+    let shown_name ;
+
     if(name != 'Des questions ou commentaires?')
     {
-        shown_name = name + "<m style='color: red; display: inline-block;'> * </m>";
+        shown_name = name + "<mand style='color: red; display: inline-block;'> * </mand>";
     }
     else
     {
         shown_name = name;
-    };
+    }
+
     if (typeof place_holder === 'undefined') 
     {
         place_holder = name; 
-    };
+    }
+
     
     return `<div class="input_container">
                 <label for="${name.toLowerCase()}"><b> ${shown_name} : </b></label>
@@ -46,7 +49,7 @@ function create_form_text_holder(name,place_holder)
                 <input id="input_${name.toLowerCase()}" class="data" type="text" name="${name.toLowerCase()}" placeholder="${place_holder}">
                 <span class="focus-input" data-placeholder="${name.toUpperCase()}"></span>
             </div>`;
-};
+}
 
 // Returns as a string the HTML source code for a drop down menu
 function create_form_drop_down(name,elements)
@@ -58,14 +61,15 @@ function create_form_drop_down(name,elements)
         drops.push(`<option value="${elements[i]}">${elements[i]}</option>`)
     };
     return `<div class="input_container">
-                <label for="${name.toLowerCase()}"><b>${name} : </b></label>
+                <label for="${name.toLowerCase()}">
+                    <b>${name} : </b>
+                </label>
                 <br>
                 <select type="text" class="data" name="${name.toLowerCase()}">
-                ${drops.join('')}
+                    ${drops.join('')}
                 </select>
-                <span class="focus-input" data-placeholder="${name.toUpperCase()}"></span>
             </div>`;
-};
+}
 
 
 /*
@@ -99,7 +103,7 @@ function create_main_page()
         <br> <br>
     </p>
     `;
-};
+}
 
 // Create project MPLI page
 function create_MPLI_page()
@@ -154,7 +158,7 @@ function create_MPLI_page()
 
     const content = document.querySelector('#content');
     content.appendChild(MPLI_project_page);
-};
+}
 
 // Create team page
 function create_team_page()
@@ -193,7 +197,7 @@ function create_team_page()
     const content = document.querySelector('#content');
     content.appendChild(team_page);
     team_page.appendChild(team_members);
-};
+}
 
 // Create page herbergeur
 function create_heberger_page() 
@@ -324,7 +328,7 @@ function create_form_page()
 
     const submit = document.querySelector("#envoyer");
     submit.addEventListener('click', submitForm);
-};
+}
 
 // Create FAQ page
 function create_faq_page()
@@ -469,7 +473,7 @@ function submitForm(event)
     fetch(encoded_url);
     location.reload();
     alert('Merci a vous. Vos coordonées ont bien étés enregistrées.');
-};
+}
 
 //Menu navigation
 const acceuil = document.querySelector("#acceuil");
