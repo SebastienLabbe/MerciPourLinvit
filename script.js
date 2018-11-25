@@ -256,12 +256,12 @@ function create_form_page()
     </div>
     <p1 id="description">
         Vous avez une chambre libre ? Vous souhaitez devenir hébergeur solidaire et faire 
-        parti de l'aventure Merci pour l'invit' ? 
+        parti de l'aventure <i> Merci pour l'invit' </i> ? 
         <br> <br>
-        Merci pour l'invit' est un projet qui prône l'hébergement solidaire afin de faciliter la 
+        <i> Merci pour l'invit' </i> est un projet qui prône l'hébergement solidaire afin de faciliter la 
         réinsertion socioprofessionnelle de femmes et de jeunes en grande précarité. 
         <br> <br>
-        Merci pour l'invit' se développe actuellement à BORDEAUX, à PARIS et sa banlieue. 
+        <i> Merci pour l'invit' </i> se développe actuellement à BORDEAUX, à PARIS et sa banlieue. 
         <br> <br>
         Après avoir rempli ce questionnaire, la responsable "hébergement"vous contactera pour 
         vous expliquer plus amplement la démarche. La Charte de cohabitation sera signée entre 
@@ -376,12 +376,10 @@ function create_contacts_page()
     const contacts_page = document.createElement('div');
     contacts_page.setAttribute('id','contacts_page');
 
-    contacts_page.innerHTML = create_page_title("Contact") +
+    contacts_page.innerHTML = create_page_title("Contacts") +
     `
     <div class="boxTopRed">
         <b>
-            CONTACT : 
-            <br><br>
             Contact Merci pour l’invit’
         </b>
         <br>
@@ -424,9 +422,10 @@ function create_contacts_page()
 
 /*
 =================================================================================
-Form submitions and menu listeners
+Form submission and Menu listeners
 =================================================================================
 */
+
 
 // Trys to submit form
 function submitForm(event) 
