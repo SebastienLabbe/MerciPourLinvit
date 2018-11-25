@@ -86,7 +86,7 @@ function create_main_page()
     const content = document.querySelector('#content');
     content.innerHTML =  
     `
-    <img id="project_MPLI" src="project_MPLI.png"></img>
+    <img id="project_MPLI" src="Images/project_MPLI.png"></img>
     <p>
         <i>Merci pour l'invit'</i> est le <b>premier réseau d'hébergement</b> 
         citoyen permettant la réinsertion de femmes en difficulté.
@@ -133,9 +133,9 @@ function create_MPLI_page()
             <br><br>
     </div>
     <span class="emphasize"> L'hébergement solidaire se déroule donc en 6 étapes : </span>
-    <img id="etapes_hebergement" src="etapes_hebergement.png"></img>
+    <img id="etapes_hebergement" src="Images/etapes_hebergement.png"></img>
     <div class="boxTopRed">
-            <img id="key_passing" src="key_passing.png" align="right"></img>
+            <img id="key_passing" src="Images/key_passing.png" align="right"></img>
             Pour devenir hébergeur solidaire, il vous suffit de remplir de clicker sur le 
             button ci-dessous:
             <br>
@@ -185,7 +185,7 @@ function create_team_page()
         team_members.innerHTML += 
         `
         <div class="team_member">
-		    <a href="${links[i]}"> <img class="team_member_image" src="${image_links[i]}.png"> </a>
+		    <a href="${links[i]}"> <img class="team_member_image" src="Images/${image_links[i]}.png"> </a>
 			<div class="team_member_description">
 				<a class="name" href="${links[i]}">${names[i]}</a> <br>
 				${roles[i]}
