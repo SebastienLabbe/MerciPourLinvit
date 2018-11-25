@@ -8,6 +8,7 @@ body {
   background-color: whitesmoke;
   cursor: default;
   font-family: "Calibri";
+  margin-bottom: 50px;
 }
 
 #background_image_left {
@@ -31,7 +32,7 @@ p, .boxTopRed {
   margin-left: 15%;
   margin-right: 15%;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   padding: 25px;
   padding-top: 20px;
   border-radius: 8px;
@@ -253,6 +254,7 @@ button
   margin-top: 20px;
   box-shadow: 5px 5px 10px grey; 
   outline-style: none;
+  font-weight: bold;
 }
 
 button:hover
