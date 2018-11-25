@@ -166,6 +166,12 @@ Menu Navigator
   transition: background-color 0.5s;
 }
 
+@media (max-width: 600px) {
+  .menu>* {
+    font-size: 12px;
+  }
+}
+
 .menu>div:hover .dropdown {
   display: block !important;
 }
@@ -174,6 +180,16 @@ Menu Navigator
   background-color: #321e41;
   transition: background-color 0.5s;
 }
+
+#menu_logo {
+  display: block;
+  width:100px;
+  height: auto;
+  margin-right: 15px;
+  margin-left: 15px;
+  padding-top: 3px;
+}
+
 
 
 /*
@@ -274,15 +290,6 @@ select {
 
 #form_title {
   margin-bottom: 30px;
-}
-
-#menu_logo {
-  display: block;
-  width:100px;
-  height: auto;
-  margin-right: 15px;
-  margin-left: 15px;
-  padding-top: 3px;
 }
 
 
