@@ -1,4 +1,8 @@
-/*general styling*/
+/*
+===================================================
+General Styling
+===================================================
+*/
 body {
   padding-top: 60px;
   padding-bottom: 20px;
@@ -79,7 +83,21 @@ button:hover
   box-shadow: 7px 7px 15px grey; 
 }
 
-/*Menu Navigator*/
+.hr{
+  border-bottom: solid grey 1px;
+  width: 100%;
+}
+
+.page_title{
+  font-size: 45px;
+}
+
+
+/*
+===================================================
+Menu Navigator
+===================================================
+*/
 .menu {
   position: fixed;
   top: 0px;
@@ -154,14 +172,23 @@ button:hover
   transition: background-color 0.5s;
 }
 
-/* Main page */
+
+/*
+===================================================
+Main Page
+===================================================
+*/
 #project_MPLI {
   width:100%;
   height: auto;
   margin-bottom: 15px; 
 }
 
-/* Form page */
+/*
+===================================================
+Form Page
+===================================================
+*/
 #form_title{
   font-size: 32px;
   font-weight: bold;
@@ -242,7 +269,12 @@ select {
   padding-top: 3px;
 }
 
-/* MPLI */
+
+/*
+===================================================
+MPLI
+===================================================
+*/
 #etapes_hebergement {
   width: 90%;
   margin-top: 30px;
@@ -257,7 +289,12 @@ select {
   box-shadow: 0px 0px 5px gray;
 }
 
-/* Team page */
+
+/*
+===================================================
+Team Page
+===================================================
+*/
 #team_page {
   margin: 0px !important;
   height: 80vh;
@@ -303,16 +340,12 @@ select {
   
 }
 
-.hr{
-  border-bottom: solid grey 1px;
-  width: 100%;
-}
 
-.page_title{
-  font-size: 45px;
-}
-
-/* scroll bar */
+/*
+===================================================
+Hide Scrollbar
+===================================================
+*/
 ::-webkit-scrollbar {
   width: 0px;
 }
