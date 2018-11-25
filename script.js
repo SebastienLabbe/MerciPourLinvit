@@ -195,7 +195,7 @@ function create_team_page()
     team_page.appendChild(team_members);
 };
 
-// Create page herbergeur
+// Create page hebergeur
 function create_heberger_page() 
 {
     empty_content('content');
@@ -486,4 +486,5 @@ heberger.addEventListener('click', create_heberger_page);
 faq.addEventListener('click', create_faq_page);
 contacts.addEventListener('click', create_contacts_page);
 
+//Generate the home page upon opening the website or refreshing
 create_main_page();
