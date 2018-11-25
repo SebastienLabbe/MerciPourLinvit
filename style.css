@@ -237,6 +237,7 @@ select {
   display: block;
   margin: 10px;
   margin-left: 20px;
+  box-shadow: 0px 0px 5px gray;
 }
 
 button
@@ -311,4 +312,9 @@ button:hover
 .hr{
   border-bottom: solid grey 1px;
   width: 100%;
+}
+
+@keyframes home_animation {
+  0% {bottom: 0vh;}
+  100% {bottom: 100vh;}
 }
