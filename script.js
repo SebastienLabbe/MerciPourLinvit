@@ -224,12 +224,10 @@ function create_contacts_page()
     const contacts_page = document.createElement('div');
     contacts_page.setAttribute('id','contacts_page');
 
-    contacts_page.innerHTML = create_page_title("Contact") +
+    contacts_page.innerHTML = create_page_title("Contacts") +
     `
     <div class="boxTopRed">
         <b>
-            CONTACT : 
-            <br><br>
             Contact Merci pour l’invit’
         </b>
         <br>

@@ -47,7 +47,6 @@ p, .boxTopRed {
 
 .emphasize {
   display: inline-block;
-  padding-top: 50px;
   font-size: 26px;
   font-weight: bold;
 }
@@ -149,7 +148,7 @@ p, .boxTopRed {
   text-align: left;
 
   margin: auto !important;
-  margin-top: 120px !important;
+  margin-top: 20px !important;
   margin-bottom: 60px !important;
   padding: 40px;
   padding-top: 40px;
