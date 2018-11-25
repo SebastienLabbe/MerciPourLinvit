@@ -112,6 +112,7 @@ Menu Navigator
   background-color: #422e51;
   font-size: 16px;
   box-shadow: 0px 0px 20px gray;
+  /*border-bottom: solid rgb(253, 191, 167) 5px;; */
 }
 
 .menu>* {
@@ -258,10 +259,21 @@ select {
   padding-left: 4px;
 }
 
+#form_title{
+  font-size: 32px;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center !important;
+}
+
 #description {
   font-size: 20px;
   text-align: justify;
   text-justify: inter-word; 
+}
+
+#form_title {
+  margin-bottom: 30px;
 }
 
 #menu_logo {
