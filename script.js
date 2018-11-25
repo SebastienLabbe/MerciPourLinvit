@@ -384,7 +384,7 @@ function create_contacts_page()
     `
     <div class="boxTopRed">
         <b>
-            Contact <i>Merci pour l'invit'</i>’
+            Contact <i>Merci pour l'invit'</i>
         </b>
         <br>
         Email : 
