@@ -474,6 +474,7 @@ function submitForm(event)
     fetch(encoded_url);
     location.reload();
     alert('Merci a vous. Vos coordonées ont bien étés enregistrées.');
+    scroll(0,0);
 }
 
 //Menu navigation
